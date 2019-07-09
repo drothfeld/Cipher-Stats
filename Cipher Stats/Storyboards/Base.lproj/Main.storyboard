@@ -146,6 +146,6 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
-        <image name="third" width="16" height="16"/>
+        <image name="third" width="30" height="30"/>
     </resources>
 </document>

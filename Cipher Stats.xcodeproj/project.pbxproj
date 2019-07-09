@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B01FFFA422D527220046B215 /* PlayerPickerPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */; };
+		B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */; };
 		B049706E22D2B5DE00AAEA8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049706D22D2B5DE00AAEA8D /* AppDelegate.swift */; };
 		B049707022D2B5DE00AAEA8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049706F22D2B5DE00AAEA8D /* ProfileViewController.swift */; };
 		B049707222D2B5DE00AAEA8D /* InsigniaStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049707122D2B5DE00AAEA8D /* InsigniaStatsViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerPickerPopUp.storyboard; sourceTree = "<group>"; };
+		B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPickerPopUpViewController.swift; sourceTree = "<group>"; };
 		B049706A22D2B5DE00AAEA8D /* Cipher Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipher Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B049706D22D2B5DE00AAEA8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B049706F22D2B5DE00AAEA8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +43,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B01FFFA722D52A4A0046B215 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B049706122D2B5DE00AAEA8D = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +72,7 @@
 				B0A0402922D422850014325E /* Models */,
 				B0A0402B22D422AB0014325E /* View Controllers */,
 				B0A0402A22D422960014325E /* Storyboards */,
+				B01FFFA722D52A4A0046B215 /* Services */,
 				B0A0402C22D422CC0014325E /* Assets */,
 				B049706D22D2B5DE00AAEA8D /* AppDelegate.swift */,
 				B049707B22D2B5DF00AAEA8D /* Info.plist */,
@@ -80,6 +92,7 @@
 			children = (
 				B049707822D2B5DF00AAEA8D /* LaunchScreen.storyboard */,
 				B049707322D2B5DE00AAEA8D /* Main.storyboard */,
+				B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -90,6 +103,7 @@
 				B049706F22D2B5DE00AAEA8D /* ProfileViewController.swift */,
 				B049707122D2B5DE00AAEA8D /* InsigniaStatsViewController.swift */,
 				B0A0402D22D425920014325E /* DeckStatsViewController.swift */,
+				B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -162,6 +176,7 @@
 			files = (
 				B049707A22D2B5DF00AAEA8D /* LaunchScreen.storyboard in Resources */,
 				B049707722D2B5DF00AAEA8D /* Assets.xcassets in Resources */,
+				B01FFFA422D527220046B215 /* PlayerPickerPopUp.storyboard in Resources */,
 				B049707522D2B5DE00AAEA8D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */,
 				B049707222D2B5DE00AAEA8D /* InsigniaStatsViewController.swift in Sources */,
 				B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */,
 				B049706E22D2B5DE00AAEA8D /* AppDelegate.swift in Sources */,

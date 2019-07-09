@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player Picker Pop Up View Controller-->
+        <scene sceneID="81c-vt-Z37">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="IZV-ul-XTa" customClass="PlayerPickerPopUpViewController" customModule="Cipher_Stats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8nq-8p-52f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQu-oS-koZ" userLabel="Cipher Player Popup View">
+                                <rect key="frame" x="67.5" y="173.5" width="240" height="320"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAYERS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzn-D0-Nwd" userLabel="Player Picker Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="60"/>
+                                        <color key="backgroundColor" red="0.63579658488063662" green="0.39173079636701652" blue="0.12922193887567573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="zwn-hc-4KX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                        <color key="textColor" red="0.96246419770700686" green="0.95623508794547263" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2N8-2C-mBX" userLabel="Player Picker">
+                                        <rect key="frame" x="0.0" y="58" width="240" height="202"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="202" id="2tB-QG-Syz"/>
+                                            <constraint firstAttribute="width" constant="240" id="UpD-ly-A4O"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="IZV-ul-XTa" id="gRz-wO-Yol"/>
+                                            <outlet property="delegate" destination="IZV-ul-XTa" id="4AK-P5-ANC"/>
+                                        </connections>
+                                    </pickerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ig9-CP-7N2" userLabel="Player Picker Done Button">
+                                        <rect key="frame" x="45" y="268" width="150" height="44"/>
+                                        <color key="backgroundColor" red="0.63245624303817749" green="0.39131850004196167" blue="0.13323044776916504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="0DL-VL-7eI"/>
+                                            <constraint firstAttribute="height" constant="44" id="ytr-25-2hZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="9"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="DoneButtonPressed:" destination="IZV-ul-XTa" eventType="touchUpInside" id="c2C-Iv-wqi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2N8-2C-mBX" firstAttribute="top" secondItem="SQu-oS-koZ" secondAttribute="top" constant="58" id="B7k-F2-g8T"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yzn-D0-Nwd" secondAttribute="trailing" id="CCB-ty-rL0"/>
+                                    <constraint firstAttribute="width" constant="240" id="Eyl-XQ-T7s"/>
+                                    <constraint firstItem="2N8-2C-mBX" firstAttribute="leading" secondItem="SQu-oS-koZ" secondAttribute="leading" id="MFr-gD-ThR"/>
+                                    <constraint firstItem="Ig9-CP-7N2" firstAttribute="centerX" secondItem="SQu-oS-koZ" secondAttribute="centerX" id="NZi-Ck-fZz"/>
+                                    <constraint firstAttribute="height" constant="320" id="SDZ-vq-aj0"/>
+                                    <constraint firstItem="Yzn-D0-Nwd" firstAttribute="top" secondItem="SQu-oS-koZ" secondAttribute="top" id="VcM-4K-9cp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ig9-CP-7N2" secondAttribute="bottom" constant="8" id="et4-Hc-PMo"/>
+                                    <constraint firstItem="Yzn-D0-Nwd" firstAttribute="leading" secondItem="SQu-oS-koZ" secondAttribute="leading" id="fLl-ua-Fqs"/>
+                                    <constraint firstAttribute="trailing" secondItem="2N8-2C-mBX" secondAttribute="trailing" id="qX0-e0-r24"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36436919760000003" green="0.36436919760000003" blue="0.36436919760000003" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                        <accessibility key="accessibilityConfiguration" identifier="selectCoffeeTypeView">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="SQu-oS-koZ" firstAttribute="centerY" secondItem="8nq-8p-52f" secondAttribute="centerY" id="cco-Jm-MqJ"/>
+                            <constraint firstItem="SQu-oS-koZ" firstAttribute="centerX" secondItem="8nq-8p-52f" secondAttribute="centerX" id="syD-Hd-awA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oCS-RN-gwe"/>
+                    </view>
+                    <connections>
+                        <outlet property="PlayerPicker" destination="2N8-2C-mBX" id="Ec1-lC-KiC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJP-Uy-sNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2406" y="825"/>
+        </scene>
+    </scenes>
+</document>
