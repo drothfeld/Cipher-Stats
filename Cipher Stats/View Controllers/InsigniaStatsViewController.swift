@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  Cipher Stats
 //
 //  Created by Dylan Rothfeld on 7/7/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class InsigniaStatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
