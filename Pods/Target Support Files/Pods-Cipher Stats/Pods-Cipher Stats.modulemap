@@ -1,0 +1,6 @@
+framework module Pods_Cipher_Stats {
+  umbrella header "Pods-Cipher Stats-umbrella.h"
+
+  export *
+  module * { export * }
+}

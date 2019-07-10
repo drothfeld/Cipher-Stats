@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F42657E1C745B3DF5CD57F5 /* Pods_Cipher_Stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696B29FED0CEFDB3D31BF71 /* Pods_Cipher_Stats.framework */; };
 		B01FFFA422D527220046B215 /* PlayerPickerPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */; };
 		B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */; };
 		B01FFFAA22D52BEC0046B215 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA922D52BEC0046B215 /* Player.swift */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B683CF0F63D7FDD2B8FCCDC /* Pods-Cipher Stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Stats.debug.xcconfig"; path = "Target Support Files/Pods-Cipher Stats/Pods-Cipher Stats.debug.xcconfig"; sourceTree = "<group>"; };
+		95C32AB1C91C0B1D7926CB25 /* Pods-Cipher Stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Stats.release.xcconfig"; path = "Target Support Files/Pods-Cipher Stats/Pods-Cipher Stats.release.xcconfig"; sourceTree = "<group>"; };
 		B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerPickerPopUp.storyboard; sourceTree = "<group>"; };
 		B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPickerPopUpViewController.swift; sourceTree = "<group>"; };
 		B01FFFA922D52BEC0046B215 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		B049707922D2B5DF00AAEA8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B049707B22D2B5DF00AAEA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A0402D22D425920014325E /* DeckStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckStatsViewController.swift; sourceTree = "<group>"; };
+		E696B29FED0CEFDB3D31BF71 /* Pods_Cipher_Stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,12 +45,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F42657E1C745B3DF5CD57F5 /* Pods_Cipher_Stats.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D5A8E998803467FE4559C76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E696B29FED0CEFDB3D31BF71 /* Pods_Cipher_Stats.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B01FFFA722D52A4A0046B215 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +89,8 @@
 			children = (
 				B049706C22D2B5DE00AAEA8D /* Cipher Stats */,
 				B049706B22D2B5DE00AAEA8D /* Products */,
+				B8415E608BDDA8BC2563B4DD /* Pods */,
+				0D5A8E998803467FE4559C76 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,6 +153,16 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		B8415E608BDDA8BC2563B4DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B683CF0F63D7FDD2B8FCCDC /* Pods-Cipher Stats.debug.xcconfig */,
+				95C32AB1C91C0B1D7926CB25 /* Pods-Cipher Stats.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B049707E22D2B5DF00AAEA8D /* Build configuration list for PBXNativeTarget "Cipher Stats" */;
 			buildPhases = (
+				702FDC573BBE81B2085F9ABA /* [CP] Check Pods Manifest.lock */,
 				B049706622D2B5DE00AAEA8D /* Sources */,
 				B049706722D2B5DE00AAEA8D /* Frameworks */,
 				B049706822D2B5DE00AAEA8D /* Resources */,
+				4F38715DBC7CC03E31C9131D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,6 +231,59 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F38715DBC7CC03E31C9131D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cipher Stats/Pods-Cipher Stats-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cipher Stats/Pods-Cipher Stats-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		702FDC573BBE81B2085F9ABA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cipher Stats-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B049706622D2B5DE00AAEA8D /* Sources */ = {
@@ -360,6 +440,7 @@
 		};
 		B049707F22D2B5DF00AAEA8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B683CF0F63D7FDD2B8FCCDC /* Pods-Cipher Stats.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +459,7 @@
 		};
 		B049708022D2B5DF00AAEA8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95C32AB1C91C0B1D7926CB25 /* Pods-Cipher Stats.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
