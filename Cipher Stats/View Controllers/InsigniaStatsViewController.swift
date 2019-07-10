@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  InsigniaStatsViewController.swift
 //  Cipher Stats
 //
 //  Created by Dylan Rothfeld on 7/7/19.

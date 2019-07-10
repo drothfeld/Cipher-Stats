@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  PlayerStatsViewController.swift
 //  Cipher Stats
 //
 //  Created by Dylan Rothfeld on 7/7/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class PlayerStatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
