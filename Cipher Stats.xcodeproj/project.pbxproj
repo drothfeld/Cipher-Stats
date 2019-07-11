@@ -12,6 +12,8 @@
 		B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */; };
 		B01FFFAA22D52BEC0046B215 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA922D52BEC0046B215 /* Player.swift */; };
 		B01FFFAC22D5B9840046B215 /* PlayerGameStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFAB22D5B9840046B215 /* PlayerGameStat.swift */; };
+		B01FFFAF22D5BFB90046B215 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01FFFAE22D5BFB90046B215 /* GoogleService-Info.plist */; };
+		B01FFFB122D669240046B215 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFB022D669240046B215 /* FirebaseService.swift */; };
 		B049706E22D2B5DE00AAEA8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049706D22D2B5DE00AAEA8D /* AppDelegate.swift */; };
 		B049707022D2B5DE00AAEA8D /* PlayerStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049706F22D2B5DE00AAEA8D /* PlayerStatsViewController.swift */; };
 		B049707222D2B5DE00AAEA8D /* InsigniaStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049707122D2B5DE00AAEA8D /* InsigniaStatsViewController.swift */; };
@@ -28,6 +30,8 @@
 		B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPickerPopUpViewController.swift; sourceTree = "<group>"; };
 		B01FFFA922D52BEC0046B215 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B01FFFAB22D5B9840046B215 /* PlayerGameStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGameStat.swift; sourceTree = "<group>"; };
+		B01FFFAE22D5BFB90046B215 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B01FFFB022D669240046B215 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		B049706A22D2B5DE00AAEA8D /* Cipher Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipher Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B049706D22D2B5DE00AAEA8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B049706F22D2B5DE00AAEA8D /* PlayerStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		B01FFFA722D52A4A0046B215 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B01FFFB022D669240046B215 /* FirebaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 				B0A0402C22D422CC0014325E /* Assets */,
 				B049706D22D2B5DE00AAEA8D /* AppDelegate.swift */,
 				B049707B22D2B5DF00AAEA8D /* Info.plist */,
+				B01FFFAE22D5BFB90046B215 /* GoogleService-Info.plist */,
 			);
 			path = "Cipher Stats";
 			sourceTree = "<group>";
@@ -159,7 +165,6 @@
 				7B683CF0F63D7FDD2B8FCCDC /* Pods-Cipher Stats.debug.xcconfig */,
 				95C32AB1C91C0B1D7926CB25 /* Pods-Cipher Stats.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -225,6 +230,7 @@
 			files = (
 				B049707A22D2B5DF00AAEA8D /* LaunchScreen.storyboard in Resources */,
 				B049707722D2B5DF00AAEA8D /* Assets.xcassets in Resources */,
+				B01FFFAF22D5BFB90046B215 /* GoogleService-Info.plist in Resources */,
 				B01FFFA422D527220046B215 /* PlayerPickerPopUp.storyboard in Resources */,
 				B049707522D2B5DE00AAEA8D /* Main.storyboard in Resources */,
 			);
@@ -292,6 +298,7 @@
 			files = (
 				B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */,
 				B01FFFAA22D52BEC0046B215 /* Player.swift in Sources */,
+				B01FFFB122D669240046B215 /* FirebaseService.swift in Sources */,
 				B049707222D2B5DE00AAEA8D /* InsigniaStatsViewController.swift in Sources */,
 				B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */,
 				B049706E22D2B5DE00AAEA8D /* AppDelegate.swift in Sources */,

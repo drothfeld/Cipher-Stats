@@ -12,7 +12,19 @@ class PlayerStatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // Make Firebase API call to get list of all users on TCG-Portal
+        FirebaseService.shared.getPlayerProfiles(completion: { results in
+            switch results {
+                // Successful API call
+                case .success(let players):
+                    print("Success")
+                
+                // An error occurred during API call
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        })
     }
 
 

@@ -7,22 +7,32 @@
 //
 
 import Foundation
-
+import FirebaseDatabase
 
 // ==================================================
 // Defines a player object that keeps track of TCG
 // broad statistics.
 // ==================================================
-struct Player {
+struct Player: Equatable, Comparable {
+    
     var email: String
     var username: String
-    var gameStats: [PlayerGameStat]
+    let ref: DatabaseReference?
+    
+    init(snapshot: DataSnapshot) {
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        email = snapshotValue["email"] as! String
+        username = snapshotValue["username"] as! String
+        ref = snapshot.ref
+    }
     
     func toAnyObject() -> Any {
         return [
             "email": email,
             "username": username,
-            "gameStats": gameStats,
         ]
     }
+    
+    static func < (lhs: Player, rhs: Player) -> Bool { return lhs.username < rhs.username }
+    static func == (lhs: Player, rhs: Player) -> Bool { return ((lhs.email == rhs.email) && (lhs.username == rhs.username)) }
 }

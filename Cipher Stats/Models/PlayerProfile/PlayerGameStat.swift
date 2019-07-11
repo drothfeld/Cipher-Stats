@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseDatabase
 
 
 // ==================================================
@@ -18,6 +19,16 @@ struct PlayerGameStat {
     var totalGames: Int
     var totalLosses: Int
     var totalWins: Int
+    let ref: DatabaseReference?
+    
+    init(snapshot: DataSnapshot) {
+        let snapshotValue = snapshot.value as! [String: AnyObject]
+        overallWinRate = snapshotValue["overallWinRate"] as! Double
+        totalGames = snapshotValue["totalGames"] as! Int
+        totalLosses = snapshotValue["totalLosses"] as! Int
+        totalWins = snapshotValue["totalWins"] as! Int
+        ref = snapshot.ref
+    }
     
     func toAnyObject() -> Any {
         return [
