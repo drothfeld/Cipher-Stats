@@ -18,8 +18,7 @@ class PlayerStatsViewController: UIViewController {
             switch results {
                 // Successful API call
                 case .success(let players):
-                    print("Success")
-                
+                    print(players[0].username)
                 // An error occurred during API call
                 case .failure(let error):
                     print(error.localizedDescription)

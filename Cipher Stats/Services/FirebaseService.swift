@@ -40,4 +40,20 @@ class FirebaseService {
             DispatchQueue.main.async { completion(.failure(error)) }
         }
     }
+    
+    //
+    // GET: Retrieve overall cipher game stats for a single player
+    //
+    func getPlayerStats(ref: DatabaseReference, completion: @escaping (Result<PlayerGameStat, Error>) -> Void) {
+        ref.child("playerStats/fireEmblemCipher").observeSingleEvent(of: .value, with: { (snapshot) in
+            let playerStats = PlayerGameStat(snapshot: snapshot)
+            
+            // Return the player game stats
+            DispatchQueue.main.async { completion(.success(playerStats)) }
+            
+        // An error occurred during the Firebase API call
+        }) { error in
+            DispatchQueue.main.async { completion(.failure(error)) }
+        }
+    }
 }
