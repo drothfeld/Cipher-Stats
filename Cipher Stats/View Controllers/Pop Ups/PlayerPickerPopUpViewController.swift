@@ -8,17 +8,36 @@
 
 import UIKit
 
+
+// ==================================================
+// A modal popup view that contains a picker with all
+// cipher players that have recorded matches.
+// ==================================================
 class PlayerPickerPopUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     // Storyboard Outlets
     @IBOutlet weak var PlayerPicker: UIPickerView!
     
     // Controller Values
-    var playerPickerData = [String]()
+    var playerPickerData = [Player]()
+    var onSelectPlayer: ((_ data: Player) -> ())?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        playerPickerData = FIREBASE_GETPLAYERS_API_RESULT
+        // Make Firebase API call to get list of all users on TCG-Portal
+        FirebaseService.shared.getPlayerProfiles(completion: { results in
+            switch results {
+                
+            // Successful API call
+            case .success(let players):
+                self.playerPickerData = players
+                self.PlayerPicker.reloadAllComponents()
+                
+            // An error occurred during API call
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
     }
     
     // Picker column count
@@ -30,8 +49,14 @@ class PlayerPickerPopUpViewController: UIViewController, UIPickerViewDelegate, U
     // Capture the picker view selection
     private func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) -> Int { return row }
     
+    // Display the picker option labels
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: playerPickerData[row].username)
+    }
+    
     // User taps the done button after choosing a player
     @IBAction func DoneButtonPressed(_ sender: Any) {
+        onSelectPlayer?(playerPickerData[PlayerPicker.selectedRow(inComponent: 0)])
         dismiss(animated: true)
     }
 }

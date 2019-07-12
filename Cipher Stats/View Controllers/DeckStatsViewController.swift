@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+// ==================================================
+// The view controller for selecting and viewing
+// cipher MC deck statistics.
+// ==================================================
 class DeckStatsViewController: UIViewController {
     
     override func viewDidLoad() {

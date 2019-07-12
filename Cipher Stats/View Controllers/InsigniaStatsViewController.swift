@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+// ==================================================
+// The view controller for selecting and viewing
+// cipher insignia/color statistics.
+// ==================================================
 class InsigniaStatsViewController: UIViewController {
 
     override func viewDidLoad() {
