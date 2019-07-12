@@ -28,14 +28,14 @@ class PlayerPickerPopUpViewController: UIViewController, UIPickerViewDelegate, U
         FirebaseService.shared.getPlayerProfiles(completion: { results in
             switch results {
                 
-            // Successful API call
-            case .success(let players):
-                self.playerPickerData = players
-                self.PlayerPicker.reloadAllComponents()
+                // Successful API call
+                case .success(let players):
+                    self.playerPickerData = players
+                    self.PlayerPicker.reloadAllComponents()
                 
-            // An error occurred during API call
-            case .failure(let error):
-                print(error.localizedDescription)
+                // An error occurred during API call
+                case .failure(let error):
+                    print(error.localizedDescription)
             }
         })
     }

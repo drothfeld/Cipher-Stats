@@ -16,18 +16,35 @@ import UIKit
 class PlayerStatsViewController: UIViewController {
     // Storyboard Outlets
     @IBOutlet weak var SelectPlayerButton: UIButton!
+    @IBOutlet weak var WinCountLabel: UILabel!
+    @IBOutlet weak var LossCountLabel: UILabel!
     
     // Controller Values
     var selectedPlayer: Player!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    // Make Firebase API call to get cipher statistics for selected player
+    func loadPlayerStats() {
+        FirebaseService.shared.getPlayerStats(ref: selectedPlayer.ref!, completion: { results in
+            switch results {
+                    
+                // Successful API call
+                case .success(let playerStats):
+                    self.WinCountLabel.text = String(playerStats.totalWins)
+                    self.LossCountLabel.text = String(playerStats.totalLosses)
+                    
+                // An error occurred during API call
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        })
     }
     
     // User selects a player from the popup
     func onSelectPlayer(_ data: Player) -> () {
         selectedPlayer = data
         SelectPlayerButton.setTitle(selectedPlayer.username, for: .normal)
+        if selectedPlayer != nil { loadPlayerStats() }
     }
     
     // Bring up cipher player popup picker view modal
