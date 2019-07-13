@@ -18,6 +18,7 @@ class PlayerStatsViewController: UIViewController {
     @IBOutlet weak var SelectPlayerButton: UIButton!
     @IBOutlet weak var WinCountLabel: UILabel!
     @IBOutlet weak var LossCountLabel: UILabel!
+    @IBOutlet weak var WinRateLabel: UILabel!
     
     // Controller Values
     var selectedPlayer: Player!
@@ -32,6 +33,7 @@ class PlayerStatsViewController: UIViewController {
                 case .success(let playerStats):
                     self.WinCountLabel.text = String(playerStats.totalWins)
                     self.LossCountLabel.text = String(playerStats.totalLosses)
+                    self.WinRateLabel.text = "Winrate: " + String(playerStats.overallWinRate.roundToPercentage(2)) + "%"
                     
                 // An error occurred during API call
                 case .failure(let error):
@@ -53,6 +55,15 @@ class PlayerStatsViewController: UIViewController {
             let popup = segue.destination as! PlayerPickerPopUpViewController
             popup.onSelectPlayer = onSelectPlayer
         }
+    }
+}
+
+// Rounds a double to a specified digit count and returns as integer
+extension Double {
+    func roundToPercentage(_ fractionDigits: Int) -> Int {
+        let multiplier = pow(10, Double(fractionDigits))
+        let rounded = Darwin.round(self * multiplier) / multiplier
+        return Int(rounded * 100)
     }
 }
 
