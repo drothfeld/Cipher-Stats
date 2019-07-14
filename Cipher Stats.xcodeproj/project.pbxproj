@@ -14,6 +14,7 @@
 		B01FFFAC22D5B9840046B215 /* PlayerGameStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFAB22D5B9840046B215 /* PlayerGameStat.swift */; };
 		B01FFFAF22D5BFB90046B215 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B01FFFAE22D5BFB90046B215 /* GoogleService-Info.plist */; };
 		B01FFFB122D669240046B215 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFB022D669240046B215 /* FirebaseService.swift */; };
+		B01FFFB322DB98460046B215 /* CipherGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFB222DB98460046B215 /* CipherGame.swift */; };
 		B049706E22D2B5DE00AAEA8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049706D22D2B5DE00AAEA8D /* AppDelegate.swift */; };
 		B049707022D2B5DE00AAEA8D /* PlayerStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049706F22D2B5DE00AAEA8D /* PlayerStatsViewController.swift */; };
 		B049707222D2B5DE00AAEA8D /* InsigniaStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049707122D2B5DE00AAEA8D /* InsigniaStatsViewController.swift */; };
@@ -32,6 +33,7 @@
 		B01FFFAB22D5B9840046B215 /* PlayerGameStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerGameStat.swift; sourceTree = "<group>"; };
 		B01FFFAE22D5BFB90046B215 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B01FFFB022D669240046B215 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		B01FFFB222DB98460046B215 /* CipherGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherGame.swift; sourceTree = "<group>"; };
 		B049706A22D2B5DE00AAEA8D /* Cipher Stats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cipher Stats.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B049706D22D2B5DE00AAEA8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B049706F22D2B5DE00AAEA8D /* PlayerStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				B01FFFAD22D5BA8E0046B215 /* PlayerProfile */,
+				B01FFFB222DB98460046B215 /* CipherGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */,
 				B049706E22D2B5DE00AAEA8D /* AppDelegate.swift in Sources */,
 				B049707022D2B5DE00AAEA8D /* PlayerStatsViewController.swift in Sources */,
+				B01FFFB322DB98460046B215 /* CipherGame.swift in Sources */,
 				B01FFFAC22D5B9840046B215 /* PlayerGameStat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
