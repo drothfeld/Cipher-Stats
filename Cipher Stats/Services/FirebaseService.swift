@@ -56,4 +56,31 @@ class FirebaseService {
             DispatchQueue.main.async { completion(.failure(error)) }
         }
     }
+    
+    //
+    // GET: Retrieves all recorded cipher game matches
+    //
+    func getCipherGameMatches(completion: @escaping (Result<[CipherGame], Error>) -> Void) {
+        //
+        // TODO: Update API endpoint URL once confirmed
+        //
+        let ref = Database.database().reference(withPath: "recordedGames/fireEmblemCipher")
+        ref.observe(.value, with: { snapshot in
+            var cipherMatches = [CipherGame]()
+            
+            // Build recorded cipher game match list
+            for item in snapshot.children {
+                let cipherGame = CipherGame(snapshot: item as! DataSnapshot)
+                cipherMatches.append(cipherGame)
+            }
+            
+            // Return the list of recorded cipher game matches sorted by date
+            cipherMatches = cipherMatches.sorted { $0.date > $1.date }
+            DispatchQueue.main.async { completion(.success(cipherMatches)) }
+            
+        // An error occurred during the Firebase API call
+        }) { error in
+            DispatchQueue.main.async { completion(.failure(error)) }
+        }
+    }
 }
