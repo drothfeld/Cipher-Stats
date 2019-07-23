@@ -18,9 +18,9 @@ struct CipherGame: Equatable, Comparable {
     var battleRoyale: Bool
     var cardGame: String
     var date: Date
-    var losingColors: [String]
-    var losingDecksOrCharacterNames: [String]
-    var losingPlayers: [String]
+    var losingColor: String
+    var losingDecksOrCharacterName: String
+    var losingPlayer: String
     var playerOne: String
     var playerTwo: String
     var playerThree: String
@@ -35,9 +35,9 @@ struct CipherGame: Equatable, Comparable {
         battleRoyale = snapshotValue["battleRoyale"] as! Bool
         cardGame = snapshotValue["cardGame"] as! String
         date = (snapshotValue["date"] as! String).toDate() ?? Date(timeIntervalSinceNow: 0)
-        losingColors = snapshotValue["losingColors"] as! [String]
-        losingDecksOrCharacterNames = snapshotValue["losingDecksOrCharacterNames"] as! [String]
-        losingPlayers = snapshotValue["losingPlayers"] as! [String]
+        losingColor = snapshotValue["losingColors"] as! String
+        losingDecksOrCharacterName = snapshotValue["losingDecksOrCharacterNames"] as! String
+        losingPlayer = snapshotValue["losingPlayers"] as! String
         playerOne = snapshotValue["playerOne"] as! String
         playerTwo = snapshotValue["playerTwo"] as! String
         playerThree = snapshotValue["playerThree"] as! String
@@ -53,9 +53,9 @@ struct CipherGame: Equatable, Comparable {
             "battleRoyale": battleRoyale,
             "cardGame": cardGame,
             "date": date,
-            "losingColors": losingColors,
-            "losingDecksOrCharacterNames": losingDecksOrCharacterNames,
-            "losingPlayers": losingPlayers,
+            "losingColor": losingColor,
+            "losingDecksOrCharacterName": losingDecksOrCharacterName,
+            "losingPlayer": losingPlayer,
             "playerOne": playerOne,
             "playerTwo": playerTwo,
             "playerThree": playerThree,

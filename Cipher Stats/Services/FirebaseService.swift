@@ -61,10 +61,7 @@ class FirebaseService {
     // GET: Retrieves all recorded cipher game matches
     //
     func getCipherGameMatches(completion: @escaping (Result<[CipherGame], Error>) -> Void) {
-        //
-        // TODO: Update API endpoint URL once confirmed
-        //
-        let ref = Database.database().reference(withPath: "recordedGames/fireEmblemCipher")
+        let ref = Database.database().reference(withPath: "recorded-games")
         ref.observe(.value, with: { snapshot in
             var cipherMatches = [CipherGame]()
             
