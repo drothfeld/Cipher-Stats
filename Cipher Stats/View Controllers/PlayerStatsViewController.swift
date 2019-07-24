@@ -19,6 +19,9 @@ class PlayerStatsViewController: UIViewController {
     @IBOutlet weak var WinCountLabel: UILabel!
     @IBOutlet weak var LossCountLabel: UILabel!
     @IBOutlet weak var WinRateLabel: UILabel!
+    @IBOutlet weak var RecentGameWinningPlayerLabel: UILabel!
+    @IBOutlet weak var RecentGameLosingPlayerLabel: UILabel!
+    @IBOutlet weak var RecentGameDateLabel: UILabel!
     
     // Controller Values
     var selectedPlayer: Player!
@@ -42,11 +45,37 @@ class PlayerStatsViewController: UIViewController {
         })
     }
     
+    // Make Firebase API call to get the most recent cipher match for selected player
+    func loadMostRecentMatch() {
+        FirebaseService.shared.getCipherGameMatches(completion: { results in
+            switch results {
+                
+                // Successful API call
+                case .success(let cipherMatches):
+                    for match in cipherMatches {
+                        if (match.winningPlayer == self.selectedPlayer.username || match.losingPlayer == self.selectedPlayer.username) {
+                            self.RecentGameWinningPlayerLabel.text = match.winningPlayer + " (" + match.winningDeckOrCharacterName + ")"
+                            self.RecentGameLosingPlayerLabel.text = match.losingPlayer + " (" + match.losingDecksOrCharacterName + ")"
+                            self.RecentGameDateLabel.text = match.date.description
+                            return
+                        }
+                    }
+                
+                // An error occurred during API call
+                case .failure(let error):
+                    print(error.localizedDescription)
+            }
+        })
+    }
+    
     // User selects a player from the popup
     func onSelectPlayer(_ data: Player) -> () {
         selectedPlayer = data
         SelectPlayerButton.setTitle(selectedPlayer.username, for: .normal)
-        if selectedPlayer != nil { loadPlayerStats() }
+        if selectedPlayer != nil {
+            loadPlayerStats()
+            loadMostRecentMatch()
+        }
     }
     
     // Bring up cipher player popup picker view modal
