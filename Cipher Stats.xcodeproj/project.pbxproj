@@ -22,6 +22,7 @@
 		B049707722D2B5DF00AAEA8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B049707622D2B5DF00AAEA8D /* Assets.xcassets */; };
 		B049707A22D2B5DF00AAEA8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B049707822D2B5DF00AAEA8D /* LaunchScreen.storyboard */; };
 		B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0402D22D425920014325E /* DeckStatsViewController.swift */; };
+		B0EB8ABA22EA58A400310608 /* StatisticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B049707922D2B5DF00AAEA8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B049707B22D2B5DF00AAEA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0A0402D22D425920014325E /* DeckStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckStatsViewController.swift; sourceTree = "<group>"; };
+		B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticExtensions.swift; sourceTree = "<group>"; };
 		E696B29FED0CEFDB3D31BF71 /* Pods_Cipher_Stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 		B049706C22D2B5DE00AAEA8D /* Cipher Stats */ = {
 			isa = PBXGroup;
 			children = (
+				B0EB8AB722EA586500310608 /* Extensions */,
 				B0A0402922D422850014325E /* Models */,
 				B0A0402B22D422AB0014325E /* View Controllers */,
 				B0A0402A22D422960014325E /* Storyboards */,
@@ -160,6 +163,14 @@
 				B049707622D2B5DF00AAEA8D /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		B0EB8AB722EA586500310608 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B8415E608BDDA8BC2563B4DD /* Pods */ = {
@@ -299,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EB8ABA22EA58A400310608 /* StatisticExtensions.swift in Sources */,
 				B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */,
 				B01FFFAA22D52BEC0046B215 /* Player.swift in Sources */,
 				B01FFFB122D669240046B215 /* FirebaseService.swift in Sources */,

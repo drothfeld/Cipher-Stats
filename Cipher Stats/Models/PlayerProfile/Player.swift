@@ -19,6 +19,12 @@ struct Player: Equatable, Comparable {
     var username: String
     let ref: DatabaseReference?
     
+    private init() {
+        self.username = "None"
+        self.email = ""
+        self.ref = nil
+    }
+    
     init(snapshot: DataSnapshot) {
         let snapshotValue = snapshot.value as! [String: AnyObject]
         email = snapshotValue["email"] as! String
@@ -32,6 +38,8 @@ struct Player: Equatable, Comparable {
             "username": username,
         ]
     }
+    
+    static let noPlayer = Player()
     
     static func < (lhs: Player, rhs: Player) -> Bool { return lhs.username < rhs.username }
     static func == (lhs: Player, rhs: Player) -> Bool { return ((lhs.email == rhs.email) && (lhs.username == rhs.username)) }

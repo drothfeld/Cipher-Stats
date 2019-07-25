@@ -20,6 +20,9 @@ class PlayerPickerPopUpViewController: UIViewController, UIPickerViewDelegate, U
     // Controller Values
     var playerPickerData = [Player]()
     var onSelectPlayer: ((_ data: Player) -> ())?
+    var onSelectOpponent: ((_ data: Player) -> ())?
+    var isOpponent = false
+    var selectedPlayer: Player!
     
     
     override func viewDidLoad() {
@@ -31,6 +34,10 @@ class PlayerPickerPopUpViewController: UIViewController, UIPickerViewDelegate, U
                 // Successful API call
                 case .success(let players):
                     self.playerPickerData = players
+                    if (self.isOpponent) {
+                        self.playerPickerData.append(Player.noPlayer)
+                        self.playerPickerData = self.playerPickerData.filter { $0 != self.selectedPlayer }
+                    }
                     self.PlayerPicker.reloadAllComponents()
                 
                 // An error occurred during API call
@@ -56,7 +63,7 @@ class PlayerPickerPopUpViewController: UIViewController, UIPickerViewDelegate, U
     
     // User taps the done button after choosing a player
     @IBAction func DoneButtonPressed(_ sender: Any) {
-        onSelectPlayer?(playerPickerData[PlayerPicker.selectedRow(inComponent: 0)])
+        isOpponent ? onSelectOpponent?(playerPickerData[PlayerPicker.selectedRow(inComponent: 0)]) : onSelectPlayer?(playerPickerData[PlayerPicker.selectedRow(inComponent: 0)])
         dismiss(animated: true)
     }
 }

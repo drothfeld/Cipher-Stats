@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-b7-cLw" userLabel="Select Player Button">
-                                <rect key="frame" x="0.0" y="111" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="47" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.63985213782652517" green="0.24958613589289172" blue="0.2432211093915802" alpha="0.70011742714723924" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
@@ -171,6 +171,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8g-01-feE" userLabel="Select Opponent Button">
+                                <rect key="frame" x="0.0" y="121" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.24958613590000001" blue="0.63921568627450975" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                                <state key="normal" title="Select Opponent">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="JC7-8c-Mh2" kind="presentation" identifier="toOpponentPickerPopup" id="VzV-CU-FgY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -181,6 +193,7 @@
                         <outlet property="RecentGameDateLabel" destination="woE-To-I7H" id="fmJ-0z-OcT"/>
                         <outlet property="RecentGameLosingPlayerLabel" destination="vqS-1D-aV2" id="gPJ-0N-kTX"/>
                         <outlet property="RecentGameWinningPlayerLabel" destination="8rA-dY-l1B" id="Mk7-Nc-tqa"/>
+                        <outlet property="SelectOpponentButton" destination="h8g-01-feE" id="EFT-Bq-eE5"/>
                         <outlet property="SelectPlayerButton" destination="LDJ-b7-cLw" id="D1p-Uf-PYc"/>
                         <outlet property="WinCountLabel" destination="VvA-in-nl3" id="dRZ-lx-Yxa"/>
                         <outlet property="WinRateLabel" destination="ght-9d-oYa" id="ZEO-W8-dXN"/>
@@ -299,4 +312,7 @@
         <image name="second" width="30" height="30"/>
         <image name="third" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="VzV-CU-FgY"/>
+    </inferredMetricsTieBreakers>
 </document>

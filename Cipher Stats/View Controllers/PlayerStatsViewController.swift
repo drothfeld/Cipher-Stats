@@ -16,6 +16,7 @@ import UIKit
 class PlayerStatsViewController: UIViewController {
     // Storyboard Outlets
     @IBOutlet weak var SelectPlayerButton: UIButton!
+    @IBOutlet weak var SelectOpponentButton: UIButton!
     @IBOutlet weak var WinCountLabel: UILabel!
     @IBOutlet weak var LossCountLabel: UILabel!
     @IBOutlet weak var WinRateLabel: UILabel!
@@ -25,24 +26,36 @@ class PlayerStatsViewController: UIViewController {
     
     // Controller Values
     var selectedPlayer: Player!
+    var selectedOpponent = Player.noPlayer
 
     
     // Make Firebase API call to get cipher statistics for selected player
     func loadPlayerStats() {
-        FirebaseService.shared.getPlayerStats(ref: selectedPlayer.ref!, completion: { results in
-            switch results {
+        if (selectedOpponent == Player.noPlayer) {
+            FirebaseService.shared.getPlayerStats(ref: selectedPlayer.ref!, completion: { results in
+                switch results {
                     
-                // Successful API call
-                case .success(let playerStats):
-                    self.WinCountLabel.text = String(playerStats.totalWins)
-                    self.LossCountLabel.text = String(playerStats.totalLosses)
-                    self.WinRateLabel.text = "Winrate: " + String(playerStats.overallWinRate.roundToPercentage(2)) + "%"
+                    // Successful API call
+                    case .success(let playerStats):
+                        self.WinCountLabel.text = String(playerStats.totalWins)
+                        self.LossCountLabel.text = String(playerStats.totalLosses)
+                        self.WinRateLabel.text = "Winrate: " + String(playerStats.overallWinRate.roundToPercentage(2)) + "%"
                     
-                // An error occurred during API call
-                case .failure(let error):
-                    print(error.localizedDescription)
-            }
-        })
+                    // An error occurred during API call
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                }
+            })
+        } else {
+            //
+            // TODO: Calculate selected player cipher match stats
+            //       ONLY when playing against selected opponent.
+            //       Update interface with new proper values.
+            //
+            self.WinCountLabel.text = "--"
+            self.LossCountLabel.text = "--"
+            self.WinRateLabel.text = "Winrate: ---%"
+        }
     }
     
     // Make Firebase API call to get the most recent cipher match for selected player
@@ -53,7 +66,11 @@ class PlayerStatsViewController: UIViewController {
                 // Successful API call
                 case .success(let cipherMatches):
                     for match in cipherMatches {
-                        if (match.winningPlayer == self.selectedPlayer.username || match.losingPlayer == self.selectedPlayer.username) {
+                        if ((self.selectedOpponent == Player.noPlayer) &&
+                            (match.winningPlayer == self.selectedPlayer.username || match.losingPlayer == self.selectedPlayer.username)) ||
+                           ((self.selectedOpponent != Player.noPlayer) &&
+                            ((match.winningPlayer == self.selectedPlayer.username && match.losingPlayer == self.selectedOpponent.username) ||
+                             (match.winningPlayer == self.selectedOpponent.username && match.losingPlayer == self.selectedPlayer.username))) {
                             self.RecentGameWinningPlayerLabel.text = match.winningPlayer + " (" + match.winningDeckOrCharacterName + ")"
                             self.RecentGameLosingPlayerLabel.text = match.losingPlayer + " (" + match.losingDecksOrCharacterName + ")"
                             self.RecentGameDateLabel.text = match.date.description
@@ -75,7 +92,17 @@ class PlayerStatsViewController: UIViewController {
         if selectedPlayer != nil {
             loadPlayerStats()
             loadMostRecentMatch()
+            SelectOpponentButton.isEnabled = true ; SelectOpponentButton.alpha = 1
+            if (selectedPlayer == selectedOpponent) { onSelectOpponent(Player.noPlayer) }
         }
+    }
+    
+    // User selects an opponent from the popup
+    func onSelectOpponent(_ data: Player) -> () {
+        selectedOpponent = data
+        (selectedOpponent == Player.noPlayer) ? SelectOpponentButton.setTitle("Select Opponent", for: .normal) : SelectOpponentButton.setTitle(selectedOpponent.username, for: .normal)
+        loadPlayerStats()
+        loadMostRecentMatch()
     }
     
     // Bring up cipher player popup picker view modal
@@ -84,15 +111,12 @@ class PlayerStatsViewController: UIViewController {
             let popup = segue.destination as! PlayerPickerPopUpViewController
             popup.onSelectPlayer = onSelectPlayer
         }
-    }
-}
-
-// Rounds a double to a specified digit count and returns as integer
-extension Double {
-    func roundToPercentage(_ fractionDigits: Int) -> Int {
-        let multiplier = pow(10, Double(fractionDigits))
-        let rounded = Darwin.round(self * multiplier) / multiplier
-        return Int(rounded * 100)
+        else if segue.identifier == "toOpponentPickerPopup" {
+            let popup = segue.destination as! PlayerPickerPopUpViewController
+            popup.onSelectOpponent = onSelectOpponent
+            popup.isOpponent = true
+            popup.selectedPlayer = selectedPlayer
+        }
     }
 }
 
