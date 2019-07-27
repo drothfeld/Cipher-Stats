@@ -80,4 +80,29 @@ class FirebaseService {
             DispatchQueue.main.async { completion(.failure(error)) }
         }
     }
+    
+    //
+    // GET: Returns an array containing the win/loss count and
+    //      overall win-rate of Player-A and Player-B's cipher matches
+    //
+    func getPlayerMatchupStats(selectedPlayer: Player, selectedOpponent: Player, completion: @escaping (Result<[Int], Error>) -> Void) {
+        let ref = Database.database().reference(withPath: "recorded-games")
+        ref.observe(.value, with: { snapshot in
+            var playerMatchupStats = [0, 0, 0]
+            
+            // Build win/loss/winrate array from recorded cipher matches
+            for item in snapshot.children {
+                let cipherGame = CipherGame(snapshot: item as! DataSnapshot)
+                if (cipherGame.winningPlayer == selectedPlayer.username && cipherGame.losingPlayer == selectedOpponent.username) { playerMatchupStats[0] += 1 }
+                else if (cipherGame.winningPlayer == selectedOpponent.username && cipherGame.losingPlayer == selectedPlayer.username) { playerMatchupStats[1] += 1 }
+            }
+            
+            playerMatchupStats[2] = (Double(playerMatchupStats[0]) / (Double(playerMatchupStats[0]) + Double(playerMatchupStats[1]))).roundToPercentage(2)
+            DispatchQueue.main.async { completion(.success(playerMatchupStats)) }
+            
+        // An error occurred during the Firebase API call
+        }) { error in
+            DispatchQueue.main.async { completion(.failure(error)) }
+        }
+    }
 }

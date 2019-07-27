@@ -31,6 +31,7 @@ class PlayerStatsViewController: UIViewController {
     
     // Make Firebase API call to get cipher statistics for selected player
     func loadPlayerStats() {
+        // If there is no selected opponent, get overall statistics
         if (selectedOpponent == Player.noPlayer) {
             FirebaseService.shared.getPlayerStats(ref: selectedPlayer.ref!, completion: { results in
                 switch results {
@@ -46,15 +47,23 @@ class PlayerStatsViewController: UIViewController {
                         print(error.localizedDescription)
                 }
             })
+            
+        // If there is a selected opponent, get statistics for just this player versus player matchup
         } else {
-            //
-            // TODO: Calculate selected player cipher match stats
-            //       ONLY when playing against selected opponent.
-            //       Update interface with new proper values.
-            //
-            self.WinCountLabel.text = "--"
-            self.LossCountLabel.text = "--"
-            self.WinRateLabel.text = "Winrate: ---%"
+            FirebaseService.shared.getPlayerMatchupStats(selectedPlayer: selectedPlayer, selectedOpponent: selectedOpponent, completion: { results in
+                switch results {
+                    
+                    // Successful API call
+                    case .success(let playerMatchupStats):
+                        self.WinCountLabel.text = String(playerMatchupStats[0])
+                        self.LossCountLabel.text = String(playerMatchupStats[1])
+                        self.WinRateLabel.text = "Winrate: " + String(playerMatchupStats[2]) + "%"
+                    
+                    // An error occurred during API call
+                    case .failure(let error):
+                        print(error.localizedDescription)
+                }
+            })
         }
     }
     
@@ -90,10 +99,10 @@ class PlayerStatsViewController: UIViewController {
         selectedPlayer = data
         SelectPlayerButton.setTitle(selectedPlayer.username, for: .normal)
         if selectedPlayer != nil {
+            if (selectedPlayer == selectedOpponent) { onSelectOpponent(Player.noPlayer) }
+            SelectOpponentButton.isEnabled = true ; SelectOpponentButton.alpha = 1
             loadPlayerStats()
             loadMostRecentMatch()
-            SelectOpponentButton.isEnabled = true ; SelectOpponentButton.alpha = 1
-            if (selectedPlayer == selectedOpponent) { onSelectOpponent(Player.noPlayer) }
         }
     }
     
