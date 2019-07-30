@@ -18,10 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-b7-cLw" userLabel="Select Player Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDJ-b7-cLw" userLabel="Select Player Button">
                                 <rect key="frame" x="0.0" y="47" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.63985213782652517" green="0.24958613589289172" blue="0.2432211093915802" alpha="0.70011742714723924" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="H4p-OC-azq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                 <state key="normal" title="Select Player">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -30,151 +32,12 @@
                                     <segue destination="JC7-8c-Mh2" kind="presentation" identifier="toPlayerPickerPopup" id="JwA-B2-6Oc"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-4r-fcd" userLabel="Wins-Losses View">
-                                <rect key="frame" x="0.0" y="179" width="375" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2iv-Lf-0Kd" userLabel="Wins View">
-                                        <rect key="frame" x="27" y="27" width="140" height="140"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8b-VL-W3p" userLabel="Wins Label">
-                                                <rect key="frame" x="0.0" y="100" width="140" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvA-in-nl3" userLabel="Win Count Label">
-                                                <rect key="frame" x="0.0" y="25" width="140" height="75"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="66"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wXh-vf-T5t" userLabel="Losses View">
-                                        <rect key="frame" x="207" y="27" width="140" height="140"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Losses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS4-xJ-V1i" userLabel="Losses Label">
-                                                <rect key="frame" x="0.0" y="100" width="140" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kc-y1-PxK" userLabel="Losses Count Label">
-                                                <rect key="frame" x="0.0" y="25" width="140" height="75"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="66"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Bo-Cf-rqm" userLabel="Winrate View">
-                                        <rect key="frame" x="87" y="202" width="200" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winrate: 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ght-9d-oYa" userLabel="Winnrate Label">
-                                                <rect key="frame" x="0.0" y="8" width="200" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UBB-Ut-T9W" userLabel="Most Recent Game View">
-                                <rect key="frame" x="0.0" y="462" width="375" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HYd-aN-lzX" userLabel="Most Recent Game Title View">
-                                        <rect key="frame" x="25" y="8" width="325" height="124"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Most Recent Game:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4a-7p-HKR" userLabel="Title Label">
-                                                <rect key="frame" x="8" y="8" width="190" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woE-To-I7H" userLabel="Date Label">
-                                                <rect key="frame" x="8" y="105" width="309" height="11"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rA-dY-l1B" userLabel="Player A Name Label">
-                                                <rect key="frame" x="51" y="45" width="250" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqS-1D-aV2" userLabel="Player B Name Label">
-                                                <rect key="frame" x="51" y="73" width="250" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnI-Ld-AkY" userLabel="Player A Win Label">
-                                                <rect key="frame" x="23" y="45" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="11"/>
-                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLP-Fa-NgI" userLabel="Player B Win Label">
-                                                <rect key="frame" x="23" y="73" width="20" height="20"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="11"/>
-                                                <color key="textColor" red="1" green="0.06950727541403523" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8g-01-feE" userLabel="Select Opponent Button">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8g-01-feE" userLabel="Select Opponent Button">
                                 <rect key="frame" x="0.0" y="121" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.24313725490196078" green="0.24958613590000001" blue="0.63921568627450975" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BAQ-oX-RV5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                 <state key="normal" title="Select Opponent">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -183,8 +46,251 @@
                                     <segue destination="JC7-8c-Mh2" kind="presentation" identifier="toOpponentPickerPopup" id="VzV-CU-FgY"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNJ-4r-fcd" userLabel="Wins-Losses View">
+                                <rect key="frame" x="0.0" y="196" width="375" height="275"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2iv-Lf-0Kd" userLabel="Wins View">
+                                        <rect key="frame" x="27" y="27" width="140" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8b-VL-W3p" userLabel="Wins Label">
+                                                <rect key="frame" x="0.0" y="100" width="140" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Y3b-Js-AvV"/>
+                                                    <constraint firstAttribute="height" constant="24" id="lys-4W-7aa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvA-in-nl3" userLabel="Win Count Label">
+                                                <rect key="frame" x="0.0" y="25" width="140" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="qUp-XW-fpx"/>
+                                                    <constraint firstAttribute="height" constant="75" id="sMx-TO-FFg"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="66"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="VvA-in-nl3" secondAttribute="trailing" id="0hK-i3-xcS"/>
+                                            <constraint firstItem="W8b-VL-W3p" firstAttribute="top" secondItem="VvA-in-nl3" secondAttribute="bottom" id="IJC-67-3CW"/>
+                                            <constraint firstAttribute="width" constant="140" id="WEX-6m-ALa"/>
+                                            <constraint firstItem="W8b-VL-W3p" firstAttribute="leading" secondItem="2iv-Lf-0Kd" secondAttribute="leading" id="Zky-HJ-MH5"/>
+                                            <constraint firstAttribute="trailing" secondItem="W8b-VL-W3p" secondAttribute="trailing" id="czb-50-HSI"/>
+                                            <constraint firstItem="VvA-in-nl3" firstAttribute="leading" secondItem="2iv-Lf-0Kd" secondAttribute="leading" id="dGD-qa-D8u"/>
+                                            <constraint firstItem="VvA-in-nl3" firstAttribute="top" secondItem="2iv-Lf-0Kd" secondAttribute="top" constant="25" id="dyG-eV-T3p"/>
+                                            <constraint firstAttribute="height" constant="140" id="fI5-Z1-dbd"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXh-vf-T5t" userLabel="Losses View">
+                                        <rect key="frame" x="207" y="27" width="140" height="140"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS4-xJ-V1i" userLabel="Losses Label">
+                                                <rect key="frame" x="0.0" y="100" width="140" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="pHh-4m-PBd"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="tzA-YU-pCy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0kc-y1-PxK" userLabel="Losses Count Label">
+                                                <rect key="frame" x="0.0" y="25" width="140" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="5QZ-b2-ure"/>
+                                                    <constraint firstAttribute="height" constant="75" id="DQ7-NP-8JJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="66"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="OS4-xJ-V1i" secondAttribute="trailing" id="1bo-Oi-8cb"/>
+                                            <constraint firstAttribute="trailing" secondItem="0kc-y1-PxK" secondAttribute="trailing" id="9Ro-df-L62"/>
+                                            <constraint firstItem="OS4-xJ-V1i" firstAttribute="top" secondItem="0kc-y1-PxK" secondAttribute="bottom" id="ASf-3Y-WDY"/>
+                                            <constraint firstItem="0kc-y1-PxK" firstAttribute="top" secondItem="wXh-vf-T5t" secondAttribute="top" constant="25" id="NF5-7f-yc4"/>
+                                            <constraint firstItem="OS4-xJ-V1i" firstAttribute="leading" secondItem="wXh-vf-T5t" secondAttribute="leading" id="cU8-Kq-8YT"/>
+                                            <constraint firstAttribute="width" constant="140" id="gqL-XI-XHK"/>
+                                            <constraint firstItem="0kc-y1-PxK" firstAttribute="leading" secondItem="wXh-vf-T5t" secondAttribute="leading" id="hRr-OT-E8E"/>
+                                            <constraint firstAttribute="height" constant="140" id="uXr-Ez-euS"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Bo-Cf-rqm" userLabel="Winrate View">
+                                        <rect key="frame" x="87.5" y="202" width="200" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winrate: 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ght-9d-oYa" userLabel="Winnrate Label">
+                                                <rect key="frame" x="0.0" y="8" width="200" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="Hmh-we-duQ"/>
+                                                    <constraint firstAttribute="height" constant="24" id="i2e-i5-KVz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="ght-9d-oYa" firstAttribute="top" secondItem="5Bo-Cf-rqm" secondAttribute="top" constant="8" id="Ibm-hO-orO"/>
+                                            <constraint firstAttribute="height" constant="40" id="KKo-lR-b6y"/>
+                                            <constraint firstAttribute="bottom" secondItem="ght-9d-oYa" secondAttribute="bottom" constant="8" id="KRi-v7-dBs"/>
+                                            <constraint firstAttribute="trailing" secondItem="ght-9d-oYa" secondAttribute="trailing" id="OI3-cU-PRG"/>
+                                            <constraint firstItem="ght-9d-oYa" firstAttribute="leading" secondItem="5Bo-Cf-rqm" secondAttribute="leading" id="QIa-BV-FDS"/>
+                                            <constraint firstAttribute="width" constant="200" id="zzn-Oh-IyU"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="5Bo-Cf-rqm" firstAttribute="centerX" secondItem="UNJ-4r-fcd" secondAttribute="centerX" id="15h-eZ-6jg"/>
+                                    <constraint firstItem="2iv-Lf-0Kd" firstAttribute="top" secondItem="UNJ-4r-fcd" secondAttribute="top" constant="27" id="6FE-TZ-WL8"/>
+                                    <constraint firstAttribute="trailing" secondItem="wXh-vf-T5t" secondAttribute="trailing" constant="28" id="MHv-NP-VK0"/>
+                                    <constraint firstItem="wXh-vf-T5t" firstAttribute="top" secondItem="UNJ-4r-fcd" secondAttribute="top" constant="27" id="N90-nO-Yv1"/>
+                                    <constraint firstAttribute="height" constant="275" id="S0a-w5-ESS"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Bo-Cf-rqm" secondAttribute="bottom" constant="33" id="dyV-9Z-mLS"/>
+                                    <constraint firstItem="2iv-Lf-0Kd" firstAttribute="leading" secondItem="UNJ-4r-fcd" secondAttribute="leading" constant="27" id="h0b-7I-3I8"/>
+                                    <constraint firstAttribute="width" constant="375" id="pLy-CB-UPk"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBB-Ut-T9W" userLabel="Most Recent Game View">
+                                <rect key="frame" x="0.0" y="473" width="375" height="140"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYd-aN-lzX" userLabel="Most Recent Game Title View">
+                                        <rect key="frame" x="25" y="8" width="325" height="124"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Most Recent Game:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4a-7p-HKR" userLabel="Title Label">
+                                                <rect key="frame" x="8" y="8" width="190" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="frB-vq-CAz"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="isJ-Jk-Rfd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woE-To-I7H" userLabel="Date Label">
+                                                <rect key="frame" x="8" y="105" width="309" height="11"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="11" id="dMc-nR-4Ad"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="309" id="diG-I5-OZz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rA-dY-l1B" userLabel="Player A Name Label">
+                                                <rect key="frame" x="51" y="45" width="250" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="R4z-NC-n1t"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="bCh-je-Kef"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqS-1D-aV2" userLabel="Player B Name Label">
+                                                <rect key="frame" x="51" y="73" width="250" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="B19-xh-88Y"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="gHf-Cz-Ll1"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="W" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnI-Ld-AkY" userLabel="Player A Win Label">
+                                                <rect key="frame" x="23" y="45" width="20" height="20"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="KL7-At-mHs"/>
+                                                    <constraint firstAttribute="width" constant="20" id="sFn-Xh-Xut"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="11"/>
+                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLP-Fa-NgI" userLabel="Player B Win Label">
+                                                <rect key="frame" x="23" y="73" width="20" height="20"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="JFw-L3-RlJ"/>
+                                                    <constraint firstAttribute="height" constant="20" id="UTD-Bf-4h2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="11"/>
+                                                <color key="textColor" red="1" green="0.06950727541403523" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="vqS-1D-aV2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GLP-Fa-NgI" secondAttribute="trailing" symbolic="YES" id="2cw-1G-fFj"/>
+                                            <constraint firstItem="vqS-1D-aV2" firstAttribute="top" secondItem="8rA-dY-l1B" secondAttribute="bottom" constant="8" id="3oK-vG-R9V"/>
+                                            <constraint firstItem="woE-To-I7H" firstAttribute="leading" secondItem="HYd-aN-lzX" secondAttribute="leading" constant="8" id="4ed-E2-Ad7"/>
+                                            <constraint firstItem="8rA-dY-l1B" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnI-Ld-AkY" secondAttribute="trailing" symbolic="YES" id="8rW-rJ-8LP"/>
+                                            <constraint firstAttribute="bottom" secondItem="woE-To-I7H" secondAttribute="bottom" constant="8" id="Elf-E9-HlB"/>
+                                            <constraint firstAttribute="trailing" secondItem="vqS-1D-aV2" secondAttribute="trailing" constant="24" id="IXC-EA-coM"/>
+                                            <constraint firstItem="8rA-dY-l1B" firstAttribute="top" secondItem="z4a-7p-HKR" secondAttribute="bottom" constant="15" id="PjI-mh-p9y"/>
+                                            <constraint firstItem="fnI-Ld-AkY" firstAttribute="top" secondItem="z4a-7p-HKR" secondAttribute="bottom" constant="15" id="ZXU-QM-5gO"/>
+                                            <constraint firstAttribute="height" constant="124" id="d6V-54-vbd"/>
+                                            <constraint firstAttribute="trailing" secondItem="woE-To-I7H" secondAttribute="trailing" constant="8" id="eak-oh-fgB"/>
+                                            <constraint firstItem="z4a-7p-HKR" firstAttribute="top" secondItem="HYd-aN-lzX" secondAttribute="top" constant="8" id="khS-7d-rbi"/>
+                                            <constraint firstItem="GLP-Fa-NgI" firstAttribute="top" secondItem="fnI-Ld-AkY" secondAttribute="bottom" constant="8" id="mh0-69-JnW"/>
+                                            <constraint firstAttribute="trailing" secondItem="z4a-7p-HKR" secondAttribute="trailing" constant="127" id="okU-Dh-haa"/>
+                                            <constraint firstItem="GLP-Fa-NgI" firstAttribute="leading" secondItem="HYd-aN-lzX" secondAttribute="leading" constant="23" id="qdl-uc-VMW"/>
+                                            <constraint firstItem="fnI-Ld-AkY" firstAttribute="leading" secondItem="HYd-aN-lzX" secondAttribute="leading" constant="23" id="saa-W8-D4W"/>
+                                            <constraint firstAttribute="trailing" secondItem="8rA-dY-l1B" secondAttribute="trailing" constant="24" id="stG-6d-d9u"/>
+                                            <constraint firstItem="z4a-7p-HKR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="woE-To-I7H" secondAttribute="leading" id="tfR-w9-Yqy"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HYd-aN-lzX" firstAttribute="centerX" secondItem="UBB-Ut-T9W" secondAttribute="centerX" id="gmL-9s-9er"/>
+                                    <constraint firstAttribute="height" constant="140" id="n1c-F5-KOD"/>
+                                    <constraint firstItem="HYd-aN-lzX" firstAttribute="top" secondItem="UBB-Ut-T9W" secondAttribute="top" constant="8" id="nhf-OP-49z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UBB-Ut-T9W" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="0zh-K3-ccH"/>
+                            <constraint firstItem="LDJ-b7-cLw" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="GSJ-DP-wQN"/>
+                            <constraint firstItem="h8g-01-feE" firstAttribute="top" secondItem="LDJ-b7-cLw" secondAttribute="bottom" constant="14" id="KuW-Py-eme"/>
+                            <constraint firstItem="LDJ-b7-cLw" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="NwC-te-z8K"/>
+                            <constraint firstItem="LDJ-b7-cLw" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="27" id="TMk-IT-6vk"/>
+                            <constraint firstItem="UBB-Ut-T9W" firstAttribute="top" secondItem="UNJ-4r-fcd" secondAttribute="bottom" constant="2" id="WWQ-yd-FDv"/>
+                            <constraint firstItem="UNJ-4r-fcd" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="WWa-i8-TBg"/>
+                            <constraint firstItem="UNJ-4r-fcd" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cXV-DV-5ok"/>
+                            <constraint firstItem="h8g-01-feE" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="hcV-8V-5pm"/>
+                            <constraint firstItem="UBB-Ut-T9W" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="pOR-zf-Mfn"/>
+                            <constraint firstItem="h8g-01-feE" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="yOn-Wk-pQr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="PlayerStats" image="first" id="acW-dT-cKf"/>
