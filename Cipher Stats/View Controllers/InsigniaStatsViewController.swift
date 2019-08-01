@@ -23,7 +23,6 @@ class InsigniaStatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     // Toggle the displayed view to show overall insignia statistics

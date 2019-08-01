@@ -21,6 +21,16 @@
 		B049707522D2B5DE00AAEA8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B049707322D2B5DE00AAEA8D /* Main.storyboard */; };
 		B049707722D2B5DF00AAEA8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B049707622D2B5DF00AAEA8D /* Assets.xcassets */; };
 		B049707A22D2B5DF00AAEA8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B049707822D2B5DF00AAEA8D /* LaunchScreen.storyboard */; };
+		B091DCCC22F34EED003D7D39 /* 30px-Green.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCC322F34EEC003D7D39 /* 30px-Green.png */; };
+		B091DCCD22F34EED003D7D39 /* 30px-Colorless.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCC422F34EEC003D7D39 /* 30px-Colorless.png */; };
+		B091DCCE22F34EED003D7D39 /* 30px-Brown.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCC522F34EEC003D7D39 /* 30px-Brown.png */; };
+		B091DCCF22F34EED003D7D39 /* 30px-Black.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCC622F34EED003D7D39 /* 30px-Black.png */; };
+		B091DCD022F34EED003D7D39 /* 30px-Blue.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCC722F34EED003D7D39 /* 30px-Blue.png */; };
+		B091DCD122F34EED003D7D39 /* 30px-Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCC822F34EED003D7D39 /* 30px-Purple.png */; };
+		B091DCD222F34EED003D7D39 /* 30px-Red.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCC922F34EED003D7D39 /* 30px-Red.png */; };
+		B091DCD322F34EED003D7D39 /* 30px-White.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCCA22F34EED003D7D39 /* 30px-White.png */; };
+		B091DCD422F34EED003D7D39 /* 30px-Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCCB22F34EED003D7D39 /* 30px-Yellow.png */; };
+		B091DCD622F359EE003D7D39 /* CipherInsignia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCD522F359EE003D7D39 /* CipherInsignia.swift */; };
 		B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0402D22D425920014325E /* DeckStatsViewController.swift */; };
 		B0EB8ABA22EA58A400310608 /* StatisticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +53,16 @@
 		B049707622D2B5DF00AAEA8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B049707922D2B5DF00AAEA8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B049707B22D2B5DF00AAEA8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B091DCC322F34EEC003D7D39 /* 30px-Green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Green.png"; sourceTree = "<group>"; };
+		B091DCC422F34EEC003D7D39 /* 30px-Colorless.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Colorless.png"; sourceTree = "<group>"; };
+		B091DCC522F34EEC003D7D39 /* 30px-Brown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Brown.png"; sourceTree = "<group>"; };
+		B091DCC622F34EED003D7D39 /* 30px-Black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Black.png"; sourceTree = "<group>"; };
+		B091DCC722F34EED003D7D39 /* 30px-Blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Blue.png"; sourceTree = "<group>"; };
+		B091DCC822F34EED003D7D39 /* 30px-Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Purple.png"; sourceTree = "<group>"; };
+		B091DCC922F34EED003D7D39 /* 30px-Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Red.png"; sourceTree = "<group>"; };
+		B091DCCA22F34EED003D7D39 /* 30px-White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-White.png"; sourceTree = "<group>"; };
+		B091DCCB22F34EED003D7D39 /* 30px-Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Yellow.png"; sourceTree = "<group>"; };
+		B091DCD522F359EE003D7D39 /* CipherInsignia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInsignia.swift; sourceTree = "<group>"; };
 		B0A0402D22D425920014325E /* DeckStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckStatsViewController.swift; sourceTree = "<group>"; };
 		B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticExtensions.swift; sourceTree = "<group>"; };
 		E696B29FED0CEFDB3D31BF71 /* Pods_Cipher_Stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,11 +147,28 @@
 			path = "Cipher Stats";
 			sourceTree = "<group>";
 		};
+		B091DCC222F34EDA003D7D39 /* Insignia Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B091DCC622F34EED003D7D39 /* 30px-Black.png */,
+				B091DCC722F34EED003D7D39 /* 30px-Blue.png */,
+				B091DCC522F34EEC003D7D39 /* 30px-Brown.png */,
+				B091DCC422F34EEC003D7D39 /* 30px-Colorless.png */,
+				B091DCC322F34EEC003D7D39 /* 30px-Green.png */,
+				B091DCC822F34EED003D7D39 /* 30px-Purple.png */,
+				B091DCC922F34EED003D7D39 /* 30px-Red.png */,
+				B091DCCA22F34EED003D7D39 /* 30px-White.png */,
+				B091DCCB22F34EED003D7D39 /* 30px-Yellow.png */,
+			);
+			path = "Insignia Categories";
+			sourceTree = "<group>";
+		};
 		B0A0402922D422850014325E /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				B01FFFAD22D5BA8E0046B215 /* PlayerProfile */,
 				B01FFFB222DB98460046B215 /* CipherGame.swift */,
+				B091DCD522F359EE003D7D39 /* CipherInsignia.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -160,6 +197,7 @@
 		B0A0402C22D422CC0014325E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B091DCC222F34EDA003D7D39 /* Insignia Categories */,
 				B049707622D2B5DF00AAEA8D /* Assets.xcassets */,
 			);
 			path = Assets;
@@ -242,8 +280,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B091DCD422F34EED003D7D39 /* 30px-Yellow.png in Resources */,
+				B091DCCF22F34EED003D7D39 /* 30px-Black.png in Resources */,
 				B049707A22D2B5DF00AAEA8D /* LaunchScreen.storyboard in Resources */,
+				B091DCD022F34EED003D7D39 /* 30px-Blue.png in Resources */,
+				B091DCCE22F34EED003D7D39 /* 30px-Brown.png in Resources */,
 				B049707722D2B5DF00AAEA8D /* Assets.xcassets in Resources */,
+				B091DCD322F34EED003D7D39 /* 30px-White.png in Resources */,
+				B091DCD122F34EED003D7D39 /* 30px-Purple.png in Resources */,
+				B091DCD222F34EED003D7D39 /* 30px-Red.png in Resources */,
+				B091DCCD22F34EED003D7D39 /* 30px-Colorless.png in Resources */,
+				B091DCCC22F34EED003D7D39 /* 30px-Green.png in Resources */,
 				B01FFFAF22D5BFB90046B215 /* GoogleService-Info.plist in Resources */,
 				B01FFFA422D527220046B215 /* PlayerPickerPopUp.storyboard in Resources */,
 				B049707522D2B5DE00AAEA8D /* Main.storyboard in Resources */,
@@ -317,6 +364,7 @@
 				B049707222D2B5DE00AAEA8D /* InsigniaStatsViewController.swift in Sources */,
 				B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */,
 				B049706E22D2B5DE00AAEA8D /* AppDelegate.swift in Sources */,
+				B091DCD622F359EE003D7D39 /* CipherInsignia.swift in Sources */,
 				B049707022D2B5DE00AAEA8D /* PlayerStatsViewController.swift in Sources */,
 				B01FFFB322DB98460046B215 /* CipherGame.swift in Sources */,
 				B01FFFAC22D5B9840046B215 /* PlayerGameStat.swift in Sources */,
