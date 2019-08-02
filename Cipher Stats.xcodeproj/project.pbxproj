@@ -31,6 +31,7 @@
 		B091DCD322F34EED003D7D39 /* 30px-White.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCCA22F34EED003D7D39 /* 30px-White.png */; };
 		B091DCD422F34EED003D7D39 /* 30px-Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCCB22F34EED003D7D39 /* 30px-Yellow.png */; };
 		B091DCD622F359EE003D7D39 /* CipherInsignia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCD522F359EE003D7D39 /* CipherInsignia.swift */; };
+		B091DCD822F4B255003D7D39 /* CipherInsigniaStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCD722F4B255003D7D39 /* CipherInsigniaStatView.swift */; };
 		B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0402D22D425920014325E /* DeckStatsViewController.swift */; };
 		B0EB8ABA22EA58A400310608 /* StatisticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		B091DCCA22F34EED003D7D39 /* 30px-White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-White.png"; sourceTree = "<group>"; };
 		B091DCCB22F34EED003D7D39 /* 30px-Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Yellow.png"; sourceTree = "<group>"; };
 		B091DCD522F359EE003D7D39 /* CipherInsignia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInsignia.swift; sourceTree = "<group>"; };
+		B091DCD722F4B255003D7D39 /* CipherInsigniaStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInsigniaStatView.swift; sourceTree = "<group>"; };
 		B0A0402D22D425920014325E /* DeckStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckStatsViewController.swift; sourceTree = "<group>"; };
 		B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticExtensions.swift; sourceTree = "<group>"; };
 		E696B29FED0CEFDB3D31BF71 /* Pods_Cipher_Stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,12 +165,21 @@
 			path = "Insignia Categories";
 			sourceTree = "<group>";
 		};
+		B091DCD922F4CCF5003D7D39 /* CipherInsignia */ = {
+			isa = PBXGroup;
+			children = (
+				B091DCD522F359EE003D7D39 /* CipherInsignia.swift */,
+				B091DCD722F4B255003D7D39 /* CipherInsigniaStatView.swift */,
+			);
+			path = CipherInsignia;
+			sourceTree = "<group>";
+		};
 		B0A0402922D422850014325E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B091DCD922F4CCF5003D7D39 /* CipherInsignia */,
 				B01FFFAD22D5BA8E0046B215 /* PlayerProfile */,
 				B01FFFB222DB98460046B215 /* CipherGame.swift */,
-				B091DCD522F359EE003D7D39 /* CipherInsignia.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -368,6 +379,7 @@
 				B049707022D2B5DE00AAEA8D /* PlayerStatsViewController.swift in Sources */,
 				B01FFFB322DB98460046B215 /* CipherGame.swift in Sources */,
 				B01FFFAC22D5B9840046B215 /* PlayerGameStat.swift in Sources */,
+				B091DCD822F4B255003D7D39 /* CipherInsigniaStatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
