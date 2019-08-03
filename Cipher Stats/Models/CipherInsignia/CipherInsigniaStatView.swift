@@ -14,7 +14,7 @@ import UIKit
 // an insignia image identifier and statistical
 // values for matchups in labels.
 // ==================================================
-class CipherInsigniaStatView: UIView {
+class UIInsigniaStatView: UIView {
     var insignia: CipherInsignia
     var winCount: Int
     var lossCount: Int

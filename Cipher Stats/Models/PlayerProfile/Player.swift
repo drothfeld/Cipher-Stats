@@ -14,7 +14,6 @@ import FirebaseDatabase
 // broad statistics.
 // ==================================================
 struct Player: Equatable, Comparable {
-    
     var email: String
     var username: String
     let ref: DatabaseReference?
