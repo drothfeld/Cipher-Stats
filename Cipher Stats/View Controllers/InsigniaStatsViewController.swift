@@ -23,6 +23,20 @@ class InsigniaStatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        FirebaseService.shared.getInsigniaMatchupStats(completion: { results in
+            switch results {
+                
+            // Successful API call
+            case .success(let insigniaMatchupStats):
+                print("SUCCESS")
+                
+            // An error occurred during API call
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
+        
     }
 
     // Toggle the displayed view to show overall insignia statistics

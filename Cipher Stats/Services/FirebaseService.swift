@@ -105,4 +105,37 @@ class FirebaseService {
             DispatchQueue.main.async { completion(.failure(error)) }
         }
     }
+    
+    //
+    // GET: Returns an array of CipherInsigniaStat objects that
+    //      contain all matchup statistics for all combinations
+    //      of CipherInsignia matchups
+    //
+    func getInsigniaMatchupStats(completion: @escaping (Result<[CipherInsigniaStat], Error>) -> Void) {
+        let ref = Database.database().reference(withPath: "game-statistics/fireEmblemCipher")
+        ref.observe(.value, with: { snapshot in
+            var insigniaMatchupStats = [CipherInsigniaStat]()
+            var insigniaMatchup: CipherInsigniaStat
+            
+            for (index, color) in snapshot.children.enumerated() {
+                switch index {
+                    case 0: insigniaMatchup = CipherInsigniaStat(cipherInsignia: CipherInsignia.nohr, snapshot: color as! DataSnapshot)
+                    case 1: insigniaMatchup = CipherInsigniaStat(cipherInsignia: CipherInsignia.mark_of_naga, snapshot: color as! DataSnapshot)
+                    case 2: insigniaMatchup = CipherInsigniaStat(cipherInsignia: CipherInsignia.medallion, snapshot: color as! DataSnapshot)
+                    case 12: insigniaMatchup = CipherInsigniaStat(cipherInsignia: CipherInsignia.divine_weapons, snapshot: color as! DataSnapshot)
+                    case 13: insigniaMatchup = CipherInsigniaStat(cipherInsignia: CipherInsignia.blade_of_light, snapshot: color as! DataSnapshot)
+                    case 15: insigniaMatchup = CipherInsigniaStat(cipherInsignia: CipherInsignia.hoshido, snapshot: color as! DataSnapshot)
+                    case 16: insigniaMatchup = CipherInsigniaStat(cipherInsignia: CipherInsignia.holy_war_flag, snapshot: color as! DataSnapshot)
+                    default: continue
+                }
+                insigniaMatchupStats.append(insigniaMatchup)
+            }
+            
+            DispatchQueue.main.async { completion(.success(insigniaMatchupStats)) }
+            
+        // An error occurred during the Firebase API call
+        }) { error in
+            DispatchQueue.main.async { completion(.failure(error)) }
+        }
+    }
 }
