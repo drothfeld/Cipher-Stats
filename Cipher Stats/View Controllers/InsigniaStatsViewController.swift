@@ -29,7 +29,8 @@ class InsigniaStatsViewController: UIViewController {
                 
             // Successful API call
             case .success(let insigniaMatchupStats):
-                print("SUCCESS")
+                let insigniaStatCollectionView = UIInsigniaStatCollectionView(cipherInsigniaStats: insigniaMatchupStats)
+                self.OverallWinratesView.addSubview(insigniaStatCollectionView)
                 
             // An error occurred during API call
             case .failure(let error):

@@ -48,11 +48,11 @@ class UIInsigniaStatView: UIView {
     }()
     
     // Constructors
-    init(insignia: CipherInsignia, winCount: Int, lossCount: Int) {
+    init(insignia: CipherInsignia, winCount: Int, lossCount: Int, collectionIndex: Int?) {
         self.insignia = insignia
         self.winCount = winCount
         self.lossCount = lossCount
-        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 30))
+        super.init(frame: CGRect(x: 0, y: (collectionIndex ?? 0) * 40, width: 300, height: 30))
         setupView()
     }
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
