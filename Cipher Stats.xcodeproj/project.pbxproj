@@ -31,8 +31,8 @@
 		B091DCD322F34EED003D7D39 /* 30px-White.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCCA22F34EED003D7D39 /* 30px-White.png */; };
 		B091DCD422F34EED003D7D39 /* 30px-Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = B091DCCB22F34EED003D7D39 /* 30px-Yellow.png */; };
 		B091DCD622F359EE003D7D39 /* CipherInsignia.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCD522F359EE003D7D39 /* CipherInsignia.swift */; };
-		B091DCD822F4B255003D7D39 /* CipherInsigniaStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCD722F4B255003D7D39 /* CipherInsigniaStatView.swift */; };
-		B091DCDB22F62827003D7D39 /* CipherInsigniaStatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCDA22F62827003D7D39 /* CipherInsigniaStatCollectionView.swift */; };
+		B091DCD822F4B255003D7D39 /* UIInsigniaStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCD722F4B255003D7D39 /* UIInsigniaStatView.swift */; };
+		B091DCDB22F62827003D7D39 /* UIInsigniaStatCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCDA22F62827003D7D39 /* UIInsigniaStatCollectionView.swift */; };
 		B091DCDD22F62AE3003D7D39 /* CipherInsigniaStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091DCDC22F62AE3003D7D39 /* CipherInsigniaStat.swift */; };
 		B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A0402D22D425920014325E /* DeckStatsViewController.swift */; };
 		B0EB8ABA22EA58A400310608 /* StatisticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */; };
@@ -66,8 +66,8 @@
 		B091DCCA22F34EED003D7D39 /* 30px-White.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-White.png"; sourceTree = "<group>"; };
 		B091DCCB22F34EED003D7D39 /* 30px-Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "30px-Yellow.png"; sourceTree = "<group>"; };
 		B091DCD522F359EE003D7D39 /* CipherInsignia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInsignia.swift; sourceTree = "<group>"; };
-		B091DCD722F4B255003D7D39 /* CipherInsigniaStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInsigniaStatView.swift; sourceTree = "<group>"; };
-		B091DCDA22F62827003D7D39 /* CipherInsigniaStatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInsigniaStatCollectionView.swift; sourceTree = "<group>"; };
+		B091DCD722F4B255003D7D39 /* UIInsigniaStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInsigniaStatView.swift; sourceTree = "<group>"; };
+		B091DCDA22F62827003D7D39 /* UIInsigniaStatCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInsigniaStatCollectionView.swift; sourceTree = "<group>"; };
 		B091DCDC22F62AE3003D7D39 /* CipherInsigniaStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInsigniaStat.swift; sourceTree = "<group>"; };
 		B0A0402D22D425920014325E /* DeckStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckStatsViewController.swift; sourceTree = "<group>"; };
 		B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticExtensions.swift; sourceTree = "<group>"; };
@@ -174,8 +174,8 @@
 			children = (
 				B091DCD522F359EE003D7D39 /* CipherInsignia.swift */,
 				B091DCDC22F62AE3003D7D39 /* CipherInsigniaStat.swift */,
-				B091DCD722F4B255003D7D39 /* CipherInsigniaStatView.swift */,
-				B091DCDA22F62827003D7D39 /* CipherInsigniaStatCollectionView.swift */,
+				B091DCD722F4B255003D7D39 /* UIInsigniaStatView.swift */,
+				B091DCDA22F62827003D7D39 /* UIInsigniaStatCollectionView.swift */,
 			);
 			path = CipherInsignia;
 			sourceTree = "<group>";
@@ -377,7 +377,7 @@
 				B0EB8ABA22EA58A400310608 /* StatisticExtensions.swift in Sources */,
 				B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */,
 				B01FFFAA22D52BEC0046B215 /* Player.swift in Sources */,
-				B091DCDB22F62827003D7D39 /* CipherInsigniaStatCollectionView.swift in Sources */,
+				B091DCDB22F62827003D7D39 /* UIInsigniaStatCollectionView.swift in Sources */,
 				B01FFFB122D669240046B215 /* FirebaseService.swift in Sources */,
 				B049707222D2B5DE00AAEA8D /* InsigniaStatsViewController.swift in Sources */,
 				B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */,
@@ -387,7 +387,7 @@
 				B049707022D2B5DE00AAEA8D /* PlayerStatsViewController.swift in Sources */,
 				B01FFFB322DB98460046B215 /* CipherGame.swift in Sources */,
 				B01FFFAC22D5B9840046B215 /* PlayerGameStat.swift in Sources */,
-				B091DCD822F4B255003D7D39 /* CipherInsigniaStatView.swift in Sources */,
+				B091DCD822F4B255003D7D39 /* UIInsigniaStatView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

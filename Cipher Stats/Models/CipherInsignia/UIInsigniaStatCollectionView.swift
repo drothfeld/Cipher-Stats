@@ -15,8 +15,28 @@ import UIKit
 // ==================================================
 class UIInsigniaStatCollectionView: UIView {
     
+    // Header row with column labels
+    lazy var headerRow: UIView = {
+        let view = UIView(frame: CGRect(x: 0, y: 15, width: 300, height: 30))
+        let winLabel = UILabel(frame: CGRect(x: 70 , y: 7, width: 70, height: 15))
+        let lossLabel = UILabel(frame: CGRect(x: 150 , y: 7, width: 70, height: 15))
+        let winRateLabel = UILabel(frame: CGRect(x: 220 , y: 7, width: 70, height: 15))
+        
+        winLabel.text = "Wins"
+        lossLabel.text = "Losses"
+        winRateLabel.text = "Winrate"
+        
+        view.backgroundColor = .white
+        view.addSubview(winLabel)
+        view.addSubview(lossLabel)
+        view.addSubview(winRateLabel)
+        
+        return view
+    }()
+    
     init(cipherInsigniaStats: [CipherInsigniaStat]) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 350))
+        addSubview(headerRow)
         
         for (index, cipherInsigniaStat) in cipherInsigniaStats.enumerated() {
             let cipherInsigniaStatView = UIInsigniaStatView(insignia: cipherInsigniaStat.cipherInsignia, winCount: cipherInsigniaStat.totalWins, lossCount: cipherInsigniaStat.totalLosses, collectionIndex: index)
