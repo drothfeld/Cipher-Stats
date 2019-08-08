@@ -10,8 +10,8 @@ import UIKit
 
 
 // ==================================================
-// Defines a subclass of UIView that contains a
-// collection of UIInsigniaStatViews.
+// Defines a subclass of UIView that contains
+// a collection of UIInsigniaStatViews.
 // ==================================================
 class UIInsigniaStatCollectionView: UIView {
     

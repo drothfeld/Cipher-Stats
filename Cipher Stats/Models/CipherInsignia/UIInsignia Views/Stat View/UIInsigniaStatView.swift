@@ -40,7 +40,7 @@ class UIInsigniaStatView: UIView {
         return label
     }()
     
-    // Win Rate UiLabel component
+    // Win Rate UILabel component
     lazy var winRate: UILabel = {
         let label = UILabel(frame: CGRect(x: 220, y: 7, width: 75, height: 15))
         label.text = String((Double(self.winCount)/Double(self.winCount + self.lossCount)).roundToPercentage(2)) + "%"

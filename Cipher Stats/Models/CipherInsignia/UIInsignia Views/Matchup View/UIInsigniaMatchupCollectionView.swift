@@ -10,21 +10,21 @@ import UIKit
 
 
 // ==================================================
-// Defines a subclass of UIView that contains a
-// collection of UIInsigniaMatchupViews.
+// Defines a subclass of UIView that contains
+// a collection of UIInsigniaMatchupViews.
 // ==================================================
 class UIInsigniaMatchupCollectionView: UIView {
     
     // Header row with insignia column labels
     lazy var headerRow: UIView = {
-        let view = UIView(frame: CGRect(x: 0, y: 15, width: 300, height: 30))
-        let redInsigniaImage = UIImageView(frame: CGRect(x: 30, y: 5, width: 20, height: 20))
-        let blueInsigniaImage = UIImageView(frame: CGRect(x: 70, y: 5, width: 20, height: 20))
-        let whiteInsigniaImage = UIImageView(frame: CGRect(x: 110, y: 5, width: 20, height: 20))
-        let blackInsigniaImage = UIImageView(frame: CGRect(x: 150, y: 5, width: 20, height: 20))
-        let greenInsigniaImage = UIImageView(frame: CGRect(x: 190, y: 5, width: 20, height: 20))
-        let purpleInsigniaImage = UIImageView(frame: CGRect(x: 230, y: 5, width: 20, height: 20))
-        let yellowInsigniaImage = UIImageView(frame: CGRect(x: 270, y: 5, width: 20, height: 20))
+        let view = UIView(frame: CGRect(x: 0, y: 15, width: 335, height: 30))
+        let redInsigniaImage = UIImageView(frame: CGRect(x: 50, y: 5, width: 20, height: 20))
+        let blueInsigniaImage = UIImageView(frame: CGRect(x: 90, y: 5, width: 20, height: 20))
+        let whiteInsigniaImage = UIImageView(frame: CGRect(x: 130, y: 5, width: 20, height: 20))
+        let blackInsigniaImage = UIImageView(frame: CGRect(x: 170, y: 5, width: 20, height: 20))
+        let greenInsigniaImage = UIImageView(frame: CGRect(x: 210, y: 5, width: 20, height: 20))
+        let purpleInsigniaImage = UIImageView(frame: CGRect(x: 250, y: 5, width: 20, height: 20))
+        let yellowInsigniaImage = UIImageView(frame: CGRect(x: 290, y: 5, width: 20, height: 20))
         
         view.backgroundColor = .white
         redInsigniaImage.image = CipherInsignia.blade_of_light.iconImage
@@ -47,13 +47,13 @@ class UIInsigniaMatchupCollectionView: UIView {
     }()
     
     init(cipherInsigniaStats: [CipherInsigniaStat]) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-        
-        // TODO: Create UIInsigniaMatchupView subclass of UIView to define
-        //       a single row in UIInsigniaMatchupCollectionView similar to
-        //       the overall stat view model setup
-        
+        super.init(frame: CGRect(x: 0, y: 0, width: 335, height: 300))
         addSubview(headerRow)
+        
+        for (index, cipherInsigniaStat) in cipherInsigniaStats.enumerated() {
+            let cipherInsigniaMatchupView = UIInsigniaMatchupView(insigniaStat: cipherInsigniaStat, collectionIndex: index)
+            addSubview(cipherInsigniaMatchupView)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
