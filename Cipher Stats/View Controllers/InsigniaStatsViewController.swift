@@ -30,7 +30,10 @@ class InsigniaStatsViewController: UIViewController {
             // Successful API call
             case .success(let insigniaMatchupStats):
                 let insigniaStatCollectionView = UIInsigniaStatCollectionView(cipherInsigniaStats: insigniaMatchupStats)
+                let insigniaMatchupCollectionView = UIInsigniaMatchupCollectionView(cipherInsigniaStats: insigniaMatchupStats)
+                
                 self.OverallWinratesView.addSubview(insigniaStatCollectionView)
+                self.MatchupWinratesView.addSubview(insigniaMatchupCollectionView)
                 
             // An error occurred during API call
             case .failure(let error):

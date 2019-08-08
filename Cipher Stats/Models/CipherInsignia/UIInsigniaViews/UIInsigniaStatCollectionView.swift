@@ -11,7 +11,7 @@ import UIKit
 
 // ==================================================
 // Defines a subclass of UIView that contains a
-// collection of UIInsigniaStatViews for modularity.
+// collection of UIInsigniaStatViews.
 // ==================================================
 class UIInsigniaStatCollectionView: UIView {
     
@@ -45,5 +45,4 @@ class UIInsigniaStatCollectionView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-
 }
