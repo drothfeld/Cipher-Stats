@@ -325,14 +325,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKO-AO-1UM" userLabel="Insignia Display Button Toggle View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZKO-AO-1UM" userLabel="Insignia Display Button Toggle View">
                                 <rect key="frame" x="0.0" y="47" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKK-Xy-aI4" userLabel="Overall Winrates Button">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKK-Xy-aI4" userLabel="Overall Winrates Button">
                                         <rect key="frame" x="0.0" y="0.0" width="187" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="187" id="75u-Hk-P1I"/>
+                                            <constraint firstAttribute="height" constant="60" id="jRz-mY-U3w"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                         <state key="normal" title="Overall">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -341,10 +343,13 @@
                                             <action selector="ToggleStatisticsButtonPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="kZW-ab-h6O"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5t-pV-rEb" userLabel="Matchup Winrates Button">
+                                    <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f5t-pV-rEb" userLabel="Matchup Winrates Button">
                                         <rect key="frame" x="187" y="0.0" width="188" height="60"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.24313725489999999" green="0.24958613590000001" blue="0.63921568630000003" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="188" id="qzH-Bc-PQC"/>
+                                            <constraint firstAttribute="height" constant="60" id="yw4-DQ-zqk"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                         <state key="normal" title="Matchups">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -355,21 +360,36 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="C55-cR-FJO"/>
+                                    <constraint firstItem="f5t-pV-rEb" firstAttribute="top" secondItem="ZKO-AO-1UM" secondAttribute="top" id="Gca-HP-qtk"/>
+                                    <constraint firstItem="oKK-Xy-aI4" firstAttribute="leading" secondItem="ZKO-AO-1UM" secondAttribute="leading" id="cLJ-N3-Fnd"/>
+                                    <constraint firstItem="f5t-pV-rEb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oKK-Xy-aI4" secondAttribute="trailing" id="lAi-Ys-GRw"/>
+                                    <constraint firstItem="oKK-Xy-aI4" firstAttribute="top" secondItem="ZKO-AO-1UM" secondAttribute="top" id="nD3-Dk-H03"/>
+                                    <constraint firstAttribute="trailing" secondItem="f5t-pV-rEb" secondAttribute="trailing" id="nME-3c-QMz"/>
+                                    <constraint firstAttribute="height" constant="100" id="zeU-bw-vYn"/>
+                                </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZN-Rg-9MU" userLabel="Matchup Insignia Statistics View">
-                                <rect key="frame" x="7" y="155" width="360" height="424"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZN-Rg-9MU" userLabel="Matchup Insignia Statistics View">
+                                <rect key="frame" x="7.5" y="157" width="360" height="424"/>
                                 <color key="backgroundColor" red="0.46674221754074097" green="0.47591489553451538" blue="0.74120646715164185" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="424" id="8Op-sn-YSJ"/>
+                                    <constraint firstAttribute="width" constant="360" id="XIt-DQ-QA1"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UVY-Ey-vrH" userLabel="Overall Insignia Statistics View">
-                                <rect key="frame" x="7" y="155" width="360" height="424"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVY-Ey-vrH" userLabel="Overall Insignia Statistics View">
+                                <rect key="frame" x="7.5" y="157" width="360" height="424"/>
                                 <color key="backgroundColor" red="0.73897254467010498" green="0.46294546127319336" blue="0.46273654699325562" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="424" id="btq-x8-0HP"/>
+                                    <constraint firstAttribute="width" constant="360" id="m03-5E-Mzm"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="30"/>
@@ -378,6 +398,14 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UVY-Ey-vrH" firstAttribute="top" secondItem="ZKO-AO-1UM" secondAttribute="bottom" constant="10" id="0cA-ad-aDL"/>
+                            <constraint firstItem="DZN-Rg-9MU" firstAttribute="top" secondItem="ZKO-AO-1UM" secondAttribute="bottom" constant="10" id="FcC-Pt-E0m"/>
+                            <constraint firstItem="DZN-Rg-9MU" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="MnM-bE-Qxn"/>
+                            <constraint firstItem="ZKO-AO-1UM" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="NSQ-2J-xFd"/>
+                            <constraint firstItem="ZKO-AO-1UM" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="27" id="Zbq-4y-3s9"/>
+                            <constraint firstItem="UVY-Ey-vrH" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="dlV-jL-CgJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="InsigniaStats" image="second" id="cPa-gy-q4n"/>

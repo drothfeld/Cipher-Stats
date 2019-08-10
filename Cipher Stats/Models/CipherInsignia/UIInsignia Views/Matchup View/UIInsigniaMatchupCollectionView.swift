@@ -47,7 +47,7 @@ class UIInsigniaMatchupCollectionView: UIView {
     }()
     
     init(cipherInsigniaStats: [CipherInsigniaStat]) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 335, height: 300))
+        super.init(frame: CGRect(x: 12.5, y: 45, width: 335, height: 300))
         addSubview(headerRow)
         
         for (index, cipherInsigniaStat) in cipherInsigniaStats.enumerated() {

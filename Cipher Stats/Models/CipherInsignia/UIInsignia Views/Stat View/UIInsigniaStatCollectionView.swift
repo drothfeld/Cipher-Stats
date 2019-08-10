@@ -35,7 +35,7 @@ class UIInsigniaStatCollectionView: UIView {
     }()
     
     init(cipherInsigniaStats: [CipherInsigniaStat]) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 300, height: 350))
+        super.init(frame: CGRect(x: 30, y: 45, width: 300, height: 350))
         addSubview(headerRow)
         
         for (index, cipherInsigniaStat) in cipherInsigniaStats.enumerated() {
