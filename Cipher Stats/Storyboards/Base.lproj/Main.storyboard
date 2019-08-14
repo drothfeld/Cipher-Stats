@@ -428,36 +428,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by DeckStatsViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCE-HQ-Uy3">
-                                <rect key="frame" x="16" y="325" width="343" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="DeckStats View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3fx-Rd-WD2">
-                                <rect key="frame" x="87" y="274" width="201" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Deck" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="awR-dQ-uSw" userLabel="Deck Textfield">
+                                <rect key="frame" x="0.0" y="47" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73897254469999996" green="0.46294546130000003" blue="0.462736547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.90101370780000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <action selector="deckNameChangedWithSender:" destination="RhQ-LI-88N" eventType="editingDidEnd" id="td0-16-ECh"/>
+                                    <outlet property="delegate" destination="RhQ-LI-88N" id="Pbz-5P-C2n"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Opponent Deck" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6po-BF-ESm" userLabel="Opponent Deck Textfield">
+                                <rect key="frame" x="0.0" y="121" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.73100376129150391" green="0.73461621999740601" blue="0.8666841983795166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.90101370780000001" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                <connections>
+                                    <action selector="deckNameChangedWithSender:" destination="RhQ-LI-88N" eventType="editingDidEnd" id="HJN-Y2-FCe"/>
+                                    <outlet property="delegate" destination="RhQ-LI-88N" id="qwd-z6-VDh"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="mCE-HQ-Uy3" firstAttribute="leading" secondItem="xnT-GV-q8t" secondAttribute="leading" constant="16" id="4tc-Fx-L4n"/>
-                            <constraint firstItem="mCE-HQ-Uy3" firstAttribute="centerX" secondItem="3fx-Rd-WD2" secondAttribute="centerX" id="5PE-V0-oMB"/>
-                            <constraint firstItem="mCE-HQ-Uy3" firstAttribute="centerY" secondItem="uLs-Hq-fEb" secondAttribute="centerY" id="F9l-h2-480"/>
-                            <constraint firstItem="3fx-Rd-WD2" firstAttribute="centerX" secondItem="uLs-Hq-fEb" secondAttribute="centerX" id="XEx-9Y-C8d"/>
-                            <constraint firstItem="3fx-Rd-WD2" firstAttribute="leading" secondItem="xnT-GV-q8t" secondAttribute="leading" constant="87" id="m6N-fz-ZfI"/>
-                            <constraint firstItem="mCE-HQ-Uy3" firstAttribute="top" secondItem="3fx-Rd-WD2" secondAttribute="bottom" constant="8" symbolic="YES" id="qIx-y2-Wsg"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xnT-GV-q8t"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="DeckStats" image="third" id="bir-I2-mb6"/>
+                    <connections>
+                        <outlet property="DeckTextfield" destination="awR-dQ-uSw" id="BTz-11-vMl"/>
+                        <outlet property="OpponentDeckTextfield" destination="6po-BF-ESm" id="V5z-92-yya"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rz-aE-5Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="770"/>
+            <point key="canvasLocation" x="840.79999999999995" y="769.56521739130437"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
