@@ -17,8 +17,19 @@ class DeckStatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        FirebaseService.shared.getCipherDeckStats(deckName: "Corrin (M)", completion: { results in
+            switch results {
+                
+            // Successful API call
+            case .success(let deckStats):
+                let stats = deckStats
+                
+                
+            // An error occurred during API call
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        })
     }
-    
-    
 }
