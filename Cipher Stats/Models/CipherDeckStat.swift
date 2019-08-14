@@ -15,11 +15,15 @@ import FirebaseDatabase
 // ==================================================
 struct CipherDeckStat {
     var name: String
+    var opponent: String
     var wins = 0
     var losses = 0
     var winrate = 0
     
-    init(name: String) { self.name = name }
+    init(name: String, opponent: String = "None") {
+        self.name = name
+        self.opponent = opponent
+    }
     
     mutating func calculateWinRate() { self.winrate = (Double(self.wins) / (Double(self.wins) + Double(self.losses))).roundToPercentage(2) }
     

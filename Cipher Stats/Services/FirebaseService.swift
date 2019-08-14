@@ -109,6 +109,33 @@ class FirebaseService {
     }
     
     //
+    // GET: Returns a CipherDeckStat object that contains win/loss
+    //      data when comparing one decks performance against another
+    //
+    func getDeckMatchupStats(deckNameA: String, deckNameB: String, completion: @escaping (Result<CipherDeckStat, Error>) -> Void) {
+        let ref = Database.database().reference(withPath: "recorded-games")
+        ref.observe(.value, with: { snapshot in
+            var cipherDeckStats = CipherDeckStat(name: deckNameA, opponent: deckNameB)
+            
+            // Go through all retrieved cipher game matches and count
+            // the wins/losses for deckNameA's performance against deckNameB
+            for item in snapshot.children {
+                let cipherGame = CipherGame(snapshot: item as! DataSnapshot)
+                if cipherGame.winningDeckOrCharacterName == cipherDeckStats.name && cipherGame.losingDecksOrCharacterName == cipherDeckStats.opponent { cipherDeckStats.addWin() }
+                else if cipherGame.winningDeckOrCharacterName == cipherDeckStats.opponent && cipherGame.losingDecksOrCharacterName == cipherDeckStats.name { cipherDeckStats.addLoss() }
+            }
+            
+            // Calculate winrate and return CipherDeckStat object
+            cipherDeckStats.calculateWinRate()
+            DispatchQueue.main.async { completion(.success(cipherDeckStats)) }
+            
+            // An error occurred during the Firebase API call
+        }) { error in
+            DispatchQueue.main.async { completion(.failure(error)) }
+        }
+    }
+    
+    //
     // GET: Returns an array containing the win/loss count and
     //      overall win-rate of Player-A and Player-B's cipher matches
     //
