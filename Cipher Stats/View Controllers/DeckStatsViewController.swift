@@ -17,6 +17,9 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
     // Storyboard Outlets
     @IBOutlet weak var DeckTextfield: UITextField!
     @IBOutlet weak var OpponentDeckTextfield: UITextField!
+    @IBOutlet weak var WinCountLabel: UILabel!
+    @IBOutlet weak var LossCountLabel: UILabel!
+    @IBOutlet weak var WinrateLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -32,7 +35,39 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func deckNameChanged(sender: UITextField) {
-        // TODO: Make Firebase API call to get
-        //       entered deck and opponent statistics
+        // If there is no selected opponent, get overall statistics
+        if (!OpponentDeckTextfield.hasText) {
+            FirebaseService.shared.getCipherDeckStats(deckName: DeckTextfield.text ?? "", completion: { results in
+                switch results {
+                    
+                // Successful API call
+                case .success(let deckStats):
+                    self.WinCountLabel.text = String(deckStats.wins)
+                    self.LossCountLabel.text = String(deckStats.losses)
+                    self.WinrateLabel.text = "Winrate: " + String(deckStats.winrate) + "%"
+                    
+                // An error occurred during API call
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
+            
+        // If there is a selected opponent, get statistics for just this deck versus deck matchup
+        } else {
+            FirebaseService.shared.getDeckMatchupStats(deckNameA: DeckTextfield.text ?? "", deckNameB: OpponentDeckTextfield.text ?? "", completion: { results in
+                switch results {
+                    
+                // Successful API call
+                case .success(let deckMatchupStats):
+                    self.WinCountLabel.text = String(deckMatchupStats.wins)
+                    self.LossCountLabel.text = String(deckMatchupStats.losses)
+                    self.WinrateLabel.text = "Winrate: " + String(deckMatchupStats.winrate) + "%"
+                    
+                // An error occurred during API call
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
+        }
     }
 }

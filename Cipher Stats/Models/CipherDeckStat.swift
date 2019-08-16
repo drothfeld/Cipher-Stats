@@ -25,7 +25,7 @@ struct CipherDeckStat {
         self.opponent = opponent
     }
     
-    mutating func calculateWinRate() { self.winrate = (Double(self.wins) / (Double(self.wins) + Double(self.losses))).roundToPercentage(2) }
+    mutating func calculateWinRate() { if (self.wins + self.losses > 0) { self.winrate = (Double(self.wins) / (Double(self.wins) + Double(self.losses))).roundToPercentage(2) } }
     
     mutating func addWin() { self.wins += 1 }
     mutating func addLoss() { self.losses += 1 }
