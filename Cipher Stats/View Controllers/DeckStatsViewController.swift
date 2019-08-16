@@ -22,6 +22,9 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var WinrateLabel: UILabel!
     @IBOutlet weak var ViewGamesButton: UIButton!
     
+    // Controller Values
+    var relevantCipherGames = [CipherGame]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +56,7 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
                     self.WinCountLabel.text = String(deckStats.wins)
                     self.LossCountLabel.text = String(deckStats.losses)
                     self.WinrateLabel.text = "Winrate: " + String(deckStats.winrate) + "%"
+                    self.relevantCipherGames = deckStats.relevantCipherGames
                     self.ViewGamesButton.isEnabled = !deckStats.relevantCipherGames.isEmpty
                     self.ViewGamesButton.alpha = self.ViewGamesButton.isEnabled ? 1.0 : 0.5
                     
@@ -72,6 +76,7 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
                     self.WinCountLabel.text = String(deckMatchupStats.wins)
                     self.LossCountLabel.text = String(deckMatchupStats.losses)
                     self.WinrateLabel.text = "Winrate: " + String(deckMatchupStats.winrate) + "%"
+                    self.relevantCipherGames = deckMatchupStats.relevantCipherGames
                     self.ViewGamesButton.isEnabled = !deckMatchupStats.relevantCipherGames.isEmpty
                     self.ViewGamesButton.alpha = self.ViewGamesButton.isEnabled ? 1.0 : 0.5
                     
@@ -87,7 +92,9 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toCipherGameListPopup" {
             let popup = segue.destination as! CipherGameListPopUpViewController
-            popup.deckNames = [DeckTextfield.text, OpponentDeckTextfield.text]
+            popup.modeNames = [DeckTextfield.text, OpponentDeckTextfield.text]
+            popup.cipherGameList = self.relevantCipherGames
+            popup.viewMode = "deck"
         }
     }
 }

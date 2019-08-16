@@ -11,6 +11,7 @@
 		B012C93C2303CCF800E2CFE7 /* CipherDeckStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012C93B2303CCF800E2CFE7 /* CipherDeckStat.swift */; };
 		B012C93E2307226900E2CFE7 /* CipherGameListViewPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012C93D2307226900E2CFE7 /* CipherGameListViewPopUp.storyboard */; };
 		B012C940230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012C93F230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift */; };
+		B012C9422307563500E2CFE7 /* CipherGameCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012C9412307563500E2CFE7 /* CipherGameCollectionViewCell.swift */; };
 		B01FFFA422D527220046B215 /* PlayerPickerPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */; };
 		B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */; };
 		B01FFFAA22D52BEC0046B215 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA922D52BEC0046B215 /* Player.swift */; };
@@ -49,6 +50,7 @@
 		B012C93B2303CCF800E2CFE7 /* CipherDeckStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherDeckStat.swift; sourceTree = "<group>"; };
 		B012C93D2307226900E2CFE7 /* CipherGameListViewPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CipherGameListViewPopUp.storyboard; sourceTree = "<group>"; };
 		B012C93F230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherGameListPopUpViewController.swift; sourceTree = "<group>"; };
+		B012C9412307563500E2CFE7 /* CipherGameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherGameCollectionViewCell.swift; sourceTree = "<group>"; };
 		B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerPickerPopUp.storyboard; sourceTree = "<group>"; };
 		B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPickerPopUpViewController.swift; sourceTree = "<group>"; };
 		B01FFFA922D52BEC0046B215 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */,
 				B012C93F230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift */,
+				B012C9412307563500E2CFE7 /* CipherGameCollectionViewCell.swift */,
 			);
 			path = "Pop Ups";
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				B01FFFB322DB98460046B215 /* CipherGame.swift in Sources */,
 				B01FFFAC22D5B9840046B215 /* PlayerGameStat.swift in Sources */,
 				B091DCD822F4B255003D7D39 /* UIInsigniaStatView.swift in Sources */,
+				B012C9422307563500E2CFE7 /* CipherGameCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
