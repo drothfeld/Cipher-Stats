@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F42657E1C745B3DF5CD57F5 /* Pods_Cipher_Stats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E696B29FED0CEFDB3D31BF71 /* Pods_Cipher_Stats.framework */; };
 		B012C93C2303CCF800E2CFE7 /* CipherDeckStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012C93B2303CCF800E2CFE7 /* CipherDeckStat.swift */; };
+		B012C93E2307226900E2CFE7 /* CipherGameListViewPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012C93D2307226900E2CFE7 /* CipherGameListViewPopUp.storyboard */; };
+		B012C940230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012C93F230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift */; };
 		B01FFFA422D527220046B215 /* PlayerPickerPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */; };
 		B01FFFA622D527650046B215 /* PlayerPickerPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */; };
 		B01FFFAA22D52BEC0046B215 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01FFFA922D52BEC0046B215 /* Player.swift */; };
@@ -45,6 +47,8 @@
 		7B683CF0F63D7FDD2B8FCCDC /* Pods-Cipher Stats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Stats.debug.xcconfig"; path = "Target Support Files/Pods-Cipher Stats/Pods-Cipher Stats.debug.xcconfig"; sourceTree = "<group>"; };
 		95C32AB1C91C0B1D7926CB25 /* Pods-Cipher Stats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cipher Stats.release.xcconfig"; path = "Target Support Files/Pods-Cipher Stats/Pods-Cipher Stats.release.xcconfig"; sourceTree = "<group>"; };
 		B012C93B2303CCF800E2CFE7 /* CipherDeckStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherDeckStat.swift; sourceTree = "<group>"; };
+		B012C93D2307226900E2CFE7 /* CipherGameListViewPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CipherGameListViewPopUp.storyboard; sourceTree = "<group>"; };
+		B012C93F230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherGameListPopUpViewController.swift; sourceTree = "<group>"; };
 		B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerPickerPopUp.storyboard; sourceTree = "<group>"; };
 		B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerPickerPopUpViewController.swift; sourceTree = "<group>"; };
 		B01FFFA922D52BEC0046B215 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B01FFFA522D527650046B215 /* PlayerPickerPopUpViewController.swift */,
+				B012C93F230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift */,
 			);
 			path = "Pop Ups";
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 				B049707822D2B5DF00AAEA8D /* LaunchScreen.storyboard */,
 				B049707322D2B5DE00AAEA8D /* Main.storyboard */,
 				B01FFFA322D527220046B215 /* PlayerPickerPopUp.storyboard */,
+				B012C93D2307226900E2CFE7 /* CipherGameListViewPopUp.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -336,6 +342,7 @@
 				B091DCD022F34EED003D7D39 /* 30px-Blue.png in Resources */,
 				B091DCCE22F34EED003D7D39 /* 30px-Brown.png in Resources */,
 				B049707722D2B5DF00AAEA8D /* Assets.xcassets in Resources */,
+				B012C93E2307226900E2CFE7 /* CipherGameListViewPopUp.storyboard in Resources */,
 				B091DCD322F34EED003D7D39 /* 30px-White.png in Resources */,
 				B091DCD122F34EED003D7D39 /* 30px-Purple.png in Resources */,
 				B091DCD222F34EED003D7D39 /* 30px-Red.png in Resources */,
@@ -419,6 +426,7 @@
 				B0A0402E22D425920014325E /* DeckStatsViewController.swift in Sources */,
 				B049706E22D2B5DE00AAEA8D /* AppDelegate.swift in Sources */,
 				B091DCDD22F62AE3003D7D39 /* CipherInsigniaStat.swift in Sources */,
+				B012C940230722CC00E2CFE7 /* CipherGameListPopUpViewController.swift in Sources */,
 				B091DCD622F359EE003D7D39 /* CipherInsignia.swift in Sources */,
 				B049707022D2B5DE00AAEA8D /* PlayerStatsViewController.swift in Sources */,
 				B01FFFB322DB98460046B215 /* CipherGame.swift in Sources */,

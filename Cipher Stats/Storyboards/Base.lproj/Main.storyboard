@@ -530,6 +530,19 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDd-jY-yTE" userLabel="View Games Button">
+                                <rect key="frame" x="97" y="479" width="180" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.18808659555403545" green="0.48401218826389969" blue="0.18382428680691001" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <state key="normal" title="View Games">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewGamesButtonPressed:" destination="RhQ-LI-88N" eventType="touchUpInside" id="RS9-su-cZk"/>
+                                    <segue destination="RCJ-GB-K01" kind="presentation" identifier="toCipherGameListPopup" id="MvT-4m-oLL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xnT-GV-q8t"/>
@@ -539,6 +552,7 @@
                         <outlet property="DeckTextfield" destination="awR-dQ-uSw" id="BTz-11-vMl"/>
                         <outlet property="LossCountLabel" destination="i9l-y9-Ici" id="2aP-dS-7GK"/>
                         <outlet property="OpponentDeckTextfield" destination="6po-BF-ESm" id="V5z-92-yya"/>
+                        <outlet property="ViewGamesButton" destination="KDd-jY-yTE" id="eZF-GH-3Z2"/>
                         <outlet property="WinCountLabel" destination="CRu-pq-ZNP" id="XFb-Ue-hUh"/>
                         <outlet property="WinrateLabel" destination="5jt-E9-nMS" id="1G1-PK-kvh"/>
                     </connections>
@@ -546,6 +560,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Rz-aE-5Bh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="769.56521739130437"/>
+        </scene>
+        <!--CipherGameListViewPopUp-->
+        <scene sceneID="0Hp-1R-5t6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CipherGameListViewPopUp" id="RCJ-GB-K01" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JhA-qO-jXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840" y="1246"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

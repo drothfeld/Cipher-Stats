@@ -19,6 +19,8 @@ struct CipherDeckStat {
     var wins = 0
     var losses = 0
     var winrate = 0
+    var relevantCipherGames = [CipherGame]()
+    
     
     init(name: String, opponent: String = "None") {
         self.name = name

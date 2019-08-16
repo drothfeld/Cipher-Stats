@@ -94,8 +94,8 @@ class FirebaseService {
             // the wins/losses for the given deck/lord/MC name
             for item in snapshot.children {
                 let cipherGame = CipherGame(snapshot: item as! DataSnapshot)
-                if cipherGame.winningDeckOrCharacterName == cipherDeckStats.name { cipherDeckStats.addWin() }
-                else if cipherGame.losingDecksOrCharacterName == cipherDeckStats.name { cipherDeckStats.addLoss() }
+                if cipherGame.winningDeckOrCharacterName == cipherDeckStats.name { cipherDeckStats.addWin(); cipherDeckStats.relevantCipherGames.append(cipherGame) }
+                else if cipherGame.losingDecksOrCharacterName == cipherDeckStats.name { cipherDeckStats.addLoss(); cipherDeckStats.relevantCipherGames.append(cipherGame) }
             }
             
             // Calculate winrate and return CipherDeckStat object
@@ -121,8 +121,8 @@ class FirebaseService {
             // the wins/losses for deckNameA's performance against deckNameB
             for item in snapshot.children {
                 let cipherGame = CipherGame(snapshot: item as! DataSnapshot)
-                if cipherGame.winningDeckOrCharacterName == cipherDeckStats.name && cipherGame.losingDecksOrCharacterName == cipherDeckStats.opponent { cipherDeckStats.addWin() }
-                else if cipherGame.winningDeckOrCharacterName == cipherDeckStats.opponent && cipherGame.losingDecksOrCharacterName == cipherDeckStats.name { cipherDeckStats.addLoss() }
+                if cipherGame.winningDeckOrCharacterName == cipherDeckStats.name && cipherGame.losingDecksOrCharacterName == cipherDeckStats.opponent { cipherDeckStats.addWin(); cipherDeckStats.relevantCipherGames.append(cipherGame) }
+                else if cipherGame.winningDeckOrCharacterName == cipherDeckStats.opponent && cipherGame.losingDecksOrCharacterName == cipherDeckStats.name { cipherDeckStats.addLoss(); cipherDeckStats.relevantCipherGames.append(cipherGame) }
             }
             
             // Calculate winrate and return CipherDeckStat object

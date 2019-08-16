@@ -20,6 +20,7 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var WinCountLabel: UILabel!
     @IBOutlet weak var LossCountLabel: UILabel!
     @IBOutlet weak var WinrateLabel: UILabel!
+    @IBOutlet weak var ViewGamesButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -34,6 +35,13 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    // Segue to popup view that displays all relevant cipher
+    // games for selected decks
+    @IBAction func viewGamesButtonPressed(_ sender: Any) {
+    }
+    
+    // User changes textfield entry for deck name or
+    // opponent deck name
     @IBAction func deckNameChanged(sender: UITextField) {
         // If there is no selected opponent, get overall statistics
         if (!OpponentDeckTextfield.hasText) {
@@ -45,6 +53,8 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
                     self.WinCountLabel.text = String(deckStats.wins)
                     self.LossCountLabel.text = String(deckStats.losses)
                     self.WinrateLabel.text = "Winrate: " + String(deckStats.winrate) + "%"
+                    self.ViewGamesButton.isEnabled = !deckStats.relevantCipherGames.isEmpty
+                    self.ViewGamesButton.alpha = self.ViewGamesButton.isEnabled ? 1.0 : 0.5
                     
                 // An error occurred during API call
                 case .failure(let error):
@@ -62,12 +72,22 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
                     self.WinCountLabel.text = String(deckMatchupStats.wins)
                     self.LossCountLabel.text = String(deckMatchupStats.losses)
                     self.WinrateLabel.text = "Winrate: " + String(deckMatchupStats.winrate) + "%"
+                    self.ViewGamesButton.isEnabled = !deckMatchupStats.relevantCipherGames.isEmpty
+                    self.ViewGamesButton.alpha = self.ViewGamesButton.isEnabled ? 1.0 : 0.5
                     
                 // An error occurred during API call
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
             })
+        }
+    }
+    
+    // Bring up cipher game list popup view modal
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toCipherGameListPopup" {
+            let popup = segue.destination as! CipherGameListPopUpViewController
+            popup.deckNames = [DeckTextfield.text, OpponentDeckTextfield.text]
         }
     }
 }
