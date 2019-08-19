@@ -48,9 +48,9 @@ class CipherGameListPopUpViewController: UIViewController, UICollectionViewDataS
                 
             cell.playerAView.backgroundColor = UIColor(red: 0, green: 128, blue: 1, alpha: 0.25)
             cell.playerBView.backgroundColor = UIColor(red: 128, green: 0, blue: 4, alpha: 0.25)
-                
-            // TODO: Set InsigniaImageView to proper image
-                
+            
+            cell.playerInsigniaImage.image = cipherGameList[indexPath.row].winningColor.convertToCipherInsignia().iconImage
+            cell.opponentInsigniaImage.image = cipherGameList[indexPath.row].losingColor.convertToCipherInsignia().iconImage
         } else {
             cell.playerNameLabel.text = cipherGameList[indexPath.row].losingPlayer
             cell.playerDeckLabel.text = cipherGameList[indexPath.row].losingDecksOrCharacterName
@@ -60,7 +60,8 @@ class CipherGameListPopUpViewController: UIViewController, UICollectionViewDataS
             cell.playerAView.backgroundColor = UIColor(red: 128, green: 0, blue: 4, alpha: 0.25)
             cell.playerBView.backgroundColor = UIColor(red: 0, green: 128, blue: 1, alpha: 0.25)
                 
-            // TODO: Set InsigniaImageView to proper image
+            cell.playerInsigniaImage.image = cipherGameList[indexPath.row].losingColor.convertToCipherInsignia().iconImage
+            cell.opponentInsigniaImage.image = cipherGameList[indexPath.row].winningColor.convertToCipherInsignia().iconImage
         }
         cell.dateLabel.text = cipherGameList[indexPath.row].date.description
         
