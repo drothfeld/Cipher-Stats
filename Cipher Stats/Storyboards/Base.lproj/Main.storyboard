@@ -428,10 +428,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Deck" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="awR-dQ-uSw" userLabel="Deck Textfield">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Deck" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="awR-dQ-uSw" userLabel="Deck Textfield">
                                 <rect key="frame" x="0.0" y="47" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.73897254469999996" green="0.46294546130000003" blue="0.462736547" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="xsA-jP-O4n"/>
+                                </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.90101370780000001" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -440,10 +442,12 @@
                                     <outlet property="delegate" destination="RhQ-LI-88N" id="Pbz-5P-C2n"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Opponent Deck" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6po-BF-ESm" userLabel="Opponent Deck Textfield">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Opponent Deck" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6po-BF-ESm" userLabel="Opponent Deck Textfield">
                                 <rect key="frame" x="0.0" y="121" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.73100376129150391" green="0.73461621999740601" blue="0.8666841983795166" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="X2A-1U-9uM"/>
+                                </constraints>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.90101370780000001" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="32"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -452,75 +456,109 @@
                                     <outlet property="delegate" destination="RhQ-LI-88N" id="qwd-z6-VDh"/>
                                 </connections>
                             </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-ba-SAP" userLabel="Wins-Losses View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W9I-ba-SAP" userLabel="Wins-Losses View">
                                 <rect key="frame" x="0.0" y="196" width="375" height="275"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUN-qR-3mB" userLabel="Wins View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUN-qR-3mB" userLabel="Wins View">
                                         <rect key="frame" x="27" y="27" width="140" height="140"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RL1-gZ-xdh" userLabel="Wins Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RL1-gZ-xdh" userLabel="Wins Label">
                                                 <rect key="frame" x="0.0" y="100" width="140" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="97V-c7-Hxn"/>
+                                                    <constraint firstAttribute="height" constant="24" id="M6J-7m-5wI"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRu-pq-ZNP" userLabel="Win Count Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRu-pq-ZNP" userLabel="Win Count Label">
                                                 <rect key="frame" x="0.0" y="25" width="140" height="75"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="8A9-96-hfN"/>
+                                                    <constraint firstAttribute="height" constant="75" id="VX4-gy-pin"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="66"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="RL1-gZ-xdh" secondAttribute="trailing" id="5Iy-nM-h5c"/>
+                                            <constraint firstAttribute="height" constant="140" id="7j3-PJ-VwP"/>
+                                            <constraint firstItem="CRu-pq-ZNP" firstAttribute="top" secondItem="SUN-qR-3mB" secondAttribute="top" constant="25" id="AfM-pL-Y6i"/>
+                                            <constraint firstAttribute="width" constant="140" id="Jgx-uX-bDh"/>
+                                            <constraint firstItem="RL1-gZ-xdh" firstAttribute="leading" secondItem="SUN-qR-3mB" secondAttribute="leading" id="feV-di-z8w"/>
+                                            <constraint firstItem="RL1-gZ-xdh" firstAttribute="top" secondItem="CRu-pq-ZNP" secondAttribute="bottom" id="lx9-7d-Oa7"/>
+                                            <constraint firstItem="CRu-pq-ZNP" firstAttribute="centerX" secondItem="SUN-qR-3mB" secondAttribute="centerX" id="zIQ-q4-YAz"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C6W-bp-1zg" userLabel="Losses View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6W-bp-1zg" userLabel="Losses View">
                                         <rect key="frame" x="207" y="27" width="140" height="140"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Losses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isd-6U-0En" userLabel="Losses Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Losses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isd-6U-0En" userLabel="Losses Label">
                                                 <rect key="frame" x="0.0" y="100" width="140" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="MSh-21-6Ye"/>
+                                                    <constraint firstAttribute="height" constant="24" id="mLt-k8-l1G"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9l-y9-Ici" userLabel="Losses Count Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9l-y9-Ici" userLabel="Losses Count Label">
                                                 <rect key="frame" x="0.0" y="25" width="140" height="75"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="MkN-qi-cPu"/>
+                                                    <constraint firstAttribute="width" constant="140" id="Oro-2W-8Y9"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="66"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="i9l-y9-Ici" firstAttribute="leading" secondItem="C6W-bp-1zg" secondAttribute="leading" id="51A-JW-XV5"/>
+                                            <constraint firstAttribute="height" constant="140" id="At9-dB-660"/>
+                                            <constraint firstAttribute="trailing" secondItem="isd-6U-0En" secondAttribute="trailing" id="BET-OS-JZF"/>
+                                            <constraint firstAttribute="width" constant="140" id="JVp-hj-GIF"/>
+                                            <constraint firstAttribute="trailing" secondItem="i9l-y9-Ici" secondAttribute="trailing" id="KPO-XF-zrs"/>
+                                            <constraint firstItem="isd-6U-0En" firstAttribute="leading" secondItem="C6W-bp-1zg" secondAttribute="leading" id="PBo-JC-jbK"/>
+                                            <constraint firstItem="i9l-y9-Ici" firstAttribute="top" secondItem="C6W-bp-1zg" secondAttribute="top" constant="25" id="tjH-s5-6q9"/>
+                                            <constraint firstItem="isd-6U-0En" firstAttribute="top" secondItem="i9l-y9-Ici" secondAttribute="bottom" id="vAX-GI-4Ql"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G2l-dz-WUg" userLabel="Winrate View">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2l-dz-WUg" userLabel="Winrate View">
                                         <rect key="frame" x="87.5" y="202" width="200" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Winrate: 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jt-E9-nMS" userLabel="Winnrate Label">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winrate: 0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jt-E9-nMS" userLabel="Winnrate Label">
                                                 <rect key="frame" x="0.0" y="8" width="200" height="24"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.63985213780000005" green="0.24958613590000001" blue="0.2432211094" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="5jt-E9-nMS" firstAttribute="leading" secondItem="G2l-dz-WUg" secondAttribute="leading" id="Cw6-PF-10G"/>
+                                            <constraint firstAttribute="trailing" secondItem="5jt-E9-nMS" secondAttribute="trailing" id="fnR-24-G1V"/>
+                                            <constraint firstAttribute="width" constant="200" id="qCQ-0n-lVW"/>
+                                            <constraint firstAttribute="bottom" secondItem="5jt-E9-nMS" secondAttribute="bottom" constant="8" id="vdc-vq-mhd"/>
+                                            <constraint firstItem="5jt-E9-nMS" firstAttribute="top" secondItem="G2l-dz-WUg" secondAttribute="top" constant="8" id="xoD-Pg-iQt"/>
+                                            <constraint firstAttribute="height" constant="40" id="z65-0I-1nv"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="20"/>
@@ -529,11 +567,24 @@
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="G2l-dz-WUg" firstAttribute="top" secondItem="SUN-qR-3mB" secondAttribute="bottom" constant="35" id="8Gf-B6-Svs"/>
+                                    <constraint firstAttribute="height" constant="275" id="W63-OI-4CZ"/>
+                                    <constraint firstAttribute="width" constant="375" id="aAc-cR-2LK"/>
+                                    <constraint firstItem="G2l-dz-WUg" firstAttribute="centerX" secondItem="W9I-ba-SAP" secondAttribute="centerX" id="ekQ-6w-hn4"/>
+                                    <constraint firstItem="SUN-qR-3mB" firstAttribute="leading" secondItem="W9I-ba-SAP" secondAttribute="leading" constant="27" id="har-WA-oDk"/>
+                                    <constraint firstItem="C6W-bp-1zg" firstAttribute="top" secondItem="W9I-ba-SAP" secondAttribute="top" constant="27" id="hi4-aw-SbP"/>
+                                    <constraint firstAttribute="trailing" secondItem="C6W-bp-1zg" secondAttribute="trailing" constant="28" id="lvh-xz-BkC"/>
+                                    <constraint firstItem="SUN-qR-3mB" firstAttribute="top" secondItem="W9I-ba-SAP" secondAttribute="top" constant="27" id="n59-HO-tWP"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDd-jY-yTE" userLabel="View Games Button">
-                                <rect key="frame" x="97" y="479" width="180" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDd-jY-yTE" userLabel="View Games Button">
+                                <rect key="frame" x="97.5" y="479" width="180" height="42"/>
                                 <color key="backgroundColor" red="0.18808659555403545" green="0.48401218826389969" blue="0.18382428680691001" alpha="0.70011742710000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="GKg-p9-ZRc"/>
+                                    <constraint firstAttribute="height" constant="42" id="oxE-T0-s7l"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
                                 <state key="normal" title="View Games">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -544,6 +595,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W9I-ba-SAP" firstAttribute="top" secondItem="6po-BF-ESm" secondAttribute="bottom" constant="15" id="CcK-Ul-cP7"/>
+                            <constraint firstItem="6po-BF-ESm" firstAttribute="leading" secondItem="xnT-GV-q8t" secondAttribute="leading" id="I3C-Af-ITG"/>
+                            <constraint firstItem="W9I-ba-SAP" firstAttribute="centerX" secondItem="uLs-Hq-fEb" secondAttribute="centerX" id="ICG-so-G3J"/>
+                            <constraint firstItem="KDd-jY-yTE" firstAttribute="top" secondItem="W9I-ba-SAP" secondAttribute="bottom" constant="8" id="Lf6-L9-pkr"/>
+                            <constraint firstItem="6po-BF-ESm" firstAttribute="centerX" secondItem="uLs-Hq-fEb" secondAttribute="centerX" id="Nhj-hY-94w"/>
+                            <constraint firstItem="6po-BF-ESm" firstAttribute="top" secondItem="awR-dQ-uSw" secondAttribute="bottom" constant="14" id="QvN-GY-Xbp"/>
+                            <constraint firstItem="KDd-jY-yTE" firstAttribute="centerX" secondItem="uLs-Hq-fEb" secondAttribute="centerX" id="YAz-aQ-uiq"/>
+                            <constraint firstItem="awR-dQ-uSw" firstAttribute="centerX" secondItem="uLs-Hq-fEb" secondAttribute="centerX" id="kfN-J1-9nY"/>
+                            <constraint firstItem="awR-dQ-uSw" firstAttribute="leading" secondItem="xnT-GV-q8t" secondAttribute="leading" id="lPu-fb-INg"/>
+                            <constraint firstItem="awR-dQ-uSw" firstAttribute="top" secondItem="xnT-GV-q8t" secondAttribute="top" constant="27" id="p19-qh-kiH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xnT-GV-q8t"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="DeckStats" image="third" id="bir-I2-mb6"/>
