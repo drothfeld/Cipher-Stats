@@ -46,8 +46,8 @@ class CipherGameListPopUpViewController: UIViewController, UICollectionViewDataS
             cell.opponentNameLabel.text = cipherGameList[indexPath.row].losingPlayer
             cell.opponentDeckLabel.text = cipherGameList[indexPath.row].losingDecksOrCharacterName
                 
-            cell.playerAView.backgroundColor = UIColor(red: 0, green: 128, blue: 1, alpha: 0.25)
-            cell.playerBView.backgroundColor = UIColor(red: 128, green: 0, blue: 4, alpha: 0.25)
+            cell.playerAView.backgroundColor = UIColor(red: 0, green: 128/255, blue: 1/255, alpha: 0.25)
+            cell.playerBView.backgroundColor = UIColor(red: 128/255, green: 0, blue: 4/255, alpha: 0.25)
             
             cell.playerInsigniaImage.image = cipherGameList[indexPath.row].winningColor.convertToCipherInsignia().iconImage
             cell.opponentInsigniaImage.image = cipherGameList[indexPath.row].losingColor.convertToCipherInsignia().iconImage
@@ -57,8 +57,8 @@ class CipherGameListPopUpViewController: UIViewController, UICollectionViewDataS
             cell.opponentNameLabel.text = cipherGameList[indexPath.row].winningPlayer
             cell.opponentDeckLabel.text = cipherGameList[indexPath.row].winningDeckOrCharacterName
                 
-            cell.playerAView.backgroundColor = UIColor(red: 128, green: 0, blue: 4, alpha: 0.25)
-            cell.playerBView.backgroundColor = UIColor(red: 0, green: 128, blue: 1, alpha: 0.25)
+            cell.playerAView.backgroundColor = UIColor(red: 128/255, green: 0, blue: 4/255, alpha: 0.25)
+            cell.playerBView.backgroundColor = UIColor(red: 0/255, green: 128/255, blue: 1/255, alpha: 0.25)
                 
             cell.playerInsigniaImage.image = cipherGameList[indexPath.row].losingColor.convertToCipherInsignia().iconImage
             cell.opponentInsigniaImage.image = cipherGameList[indexPath.row].winningColor.convertToCipherInsignia().iconImage

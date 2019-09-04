@@ -539,7 +539,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="viewGamesButtonPressed:" destination="RhQ-LI-88N" eventType="touchUpInside" id="RS9-su-cZk"/>
                                     <segue destination="RCJ-GB-K01" kind="presentation" identifier="toCipherGameListPopup" id="MvT-4m-oLL"/>
                                 </connections>
                             </button>

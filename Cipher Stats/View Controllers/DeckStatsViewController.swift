@@ -38,11 +38,6 @@ class DeckStatsViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    // Segue to popup view that displays all relevant cipher
-    // games for selected decks
-    @IBAction func viewGamesButtonPressed(_ sender: Any) {
-    }
-    
     // User changes textfield entry for deck name or
     // opponent deck name
     @IBAction func deckNameChanged(sender: UITextField) {
