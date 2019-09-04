@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="68C-o4-EQK" userLabel="Cipher Game List Popup View">
-                                <rect key="frame" x="27" y="93" width="320" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68C-o4-EQK" userLabel="Cipher Game List Popup View">
+                                <rect key="frame" x="27.5" y="93" width="320" height="480"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A7n-Gf-mIl" userLabel="Header View">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -146,6 +145,10 @@
                                     </collectionView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="sPb-ul-2LY"/>
+                                    <constraint firstAttribute="height" constant="480" id="van-ze-EOd"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="9"/>
@@ -157,6 +160,10 @@
                         <accessibility key="accessibilityConfiguration" identifier="selectCoffeeTypeView">
                             <bool key="isElement" value="YES"/>
                         </accessibility>
+                        <constraints>
+                            <constraint firstItem="68C-o4-EQK" firstAttribute="top" secondItem="b7Y-YY-awe" secondAttribute="top" constant="73" id="Jzc-dZ-9FW"/>
+                            <constraint firstItem="68C-o4-EQK" firstAttribute="centerX" secondItem="8n3-gW-dFg" secondAttribute="centerX" id="eiO-Tq-gsg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="b7Y-YY-awe"/>
                     </view>
                     <connections>
