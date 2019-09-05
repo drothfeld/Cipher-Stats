@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +17,49 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="NWU-z1-Pzl" userLabel="Background Gradient Image">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="NQp-0U-2JH" userLabel="Logo Image">
+                                <rect key="frame" x="37.5" y="183" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Fpq-jy-a9g"/>
+                                    <constraint firstAttribute="height" constant="300" id="lEv-zH-Qr6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cipher Stats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5H-SF-4ix" userLabel="Name Label">
+                                <rect key="frame" x="0.0" y="491" width="375" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="0IX-Zi-MPw"/>
+                                    <constraint firstAttribute="height" constant="75" id="75z-Yu-rYS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="40"/>
+                                <color key="textColor" red="0.95666259527206421" green="0.47427990100135103" blue="0.2508048415184021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="b5H-SF-4ix" firstAttribute="top" secondItem="NQp-0U-2JH" secondAttribute="bottom" constant="8" id="3wq-P7-qxe"/>
+                            <constraint firstItem="NQp-0U-2JH" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KlF-Fn-WT1"/>
+                            <constraint firstItem="b5H-SF-4ix" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="L5P-p6-af7"/>
+                            <constraint firstItem="NQp-0U-2JH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="163" id="R8B-xv-uZT"/>
+                            <constraint firstItem="NWU-z1-Pzl" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="UKY-a0-4KA"/>
+                            <constraint firstItem="NWU-z1-Pzl" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="dsU-tX-dQf"/>
+                            <constraint firstItem="NWU-z1-Pzl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="em0-wx-MTW"/>
+                            <constraint firstItem="NWU-z1-Pzl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="vfl-fF-87X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.png" width="285.71429443359375" height="571.4285888671875"/>
+        <image name="logo.png" width="1024" height="1024"/>
+    </resources>
 </document>

@@ -43,6 +43,8 @@
 		B0D170D422FBE4450053A56E /* UIInsigniaMatchupCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D170D322FBE4450053A56E /* UIInsigniaMatchupCollectionView.swift */; };
 		B0D170D722FCA48C0053A56E /* UIInsigniaMatchupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D170D622FCA48C0053A56E /* UIInsigniaMatchupView.swift */; };
 		B0EB8ABA22EA58A400310608 /* StatisticExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */; };
+		B0EBB9C02321940E003D5083 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B0EBB9BF2321940E003D5083 /* logo.png */; };
+		B0EBB9C2232194D6003D5083 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = B0EBB9C1232194D6003D5083 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,8 @@
 		B0D170D322FBE4450053A56E /* UIInsigniaMatchupCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInsigniaMatchupCollectionView.swift; sourceTree = "<group>"; };
 		B0D170D622FCA48C0053A56E /* UIInsigniaMatchupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInsigniaMatchupView.swift; sourceTree = "<group>"; };
 		B0EB8AB922EA58A400310608 /* StatisticExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticExtensions.swift; sourceTree = "<group>"; };
+		B0EBB9BF2321940E003D5083 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		B0EBB9C1232194D6003D5083 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		E696B29FED0CEFDB3D31BF71 /* Pods_Cipher_Stats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cipher_Stats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -231,6 +235,8 @@
 		B0A0402C22D422CC0014325E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				B0EBB9BF2321940E003D5083 /* logo.png */,
+				B0EBB9C1232194D6003D5083 /* background.png */,
 				B091DCC222F34EDA003D7D39 /* Insignia Categories */,
 				B049707622D2B5DF00AAEA8D /* Assets.xcassets */,
 			);
@@ -344,6 +350,7 @@
 			files = (
 				B091DCD422F34EED003D7D39 /* 30px-Yellow.png in Resources */,
 				B091DCCF22F34EED003D7D39 /* 30px-Black.png in Resources */,
+				B0EBB9C2232194D6003D5083 /* background.png in Resources */,
 				B049707A22D2B5DF00AAEA8D /* LaunchScreen.storyboard in Resources */,
 				B091DCD022F34EED003D7D39 /* 30px-Blue.png in Resources */,
 				B091DCCE22F34EED003D7D39 /* 30px-Brown.png in Resources */,
@@ -354,6 +361,7 @@
 				B091DCD222F34EED003D7D39 /* 30px-Red.png in Resources */,
 				B091DCCD22F34EED003D7D39 /* 30px-Colorless.png in Resources */,
 				B091DCCC22F34EED003D7D39 /* 30px-Green.png in Resources */,
+				B0EBB9C02321940E003D5083 /* logo.png in Resources */,
 				B01FFFAF22D5BFB90046B215 /* GoogleService-Info.plist in Resources */,
 				B01FFFA422D527220046B215 /* PlayerPickerPopUp.storyboard in Resources */,
 				B049707522D2B5DE00AAEA8D /* Main.storyboard in Resources */,
